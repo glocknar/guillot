@@ -1,0 +1,70 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\noindent {\Large \textbf{PROBLEM 1.2}}  (Guillot, 2018, p. 21) \\\\
+\indent Let $F$ be a field of characteristic $p \neq 2$. Let $a \in F^\times{\setminus}F^{\times2}$, and $K = F[\sqrt{a}]$. \\\\
+\indent We do not assume that $\sqrt{-1} \in{F}$. \\\\
+\\
+\textbf{PART 1} \\\\
+\indent Suppose that there exists an extension $L/F$ with $K \subset L$. \\\\
+\indent Suppose further that $L/F$ is Galois with $\textbf{Gal}(L/F) \cong C_4$, the cyclic group of order 4. \\\\
+\indent Show that there exists an $\alpha \in K$ such that $N_{K/F}(\alpha) = -1.$ \\\\
+\indent Hint: try $\alpha = \dfrac{\theta - \sigma^2(\theta)}{\sigma(\theta) - \sigma^3(\theta)}$. \\\\
+\\
+\textbf{SOLUTION 1.2.1} \\\\
+\noindent Since $\textbf{Gal}(L/F)$ is cyclic of degree $4$, we have: \\\\
+\indent $\bullet$ \indent $L = F[\sqrt[4]{a}]$ for some $a \in{F^{\times}}$, and \\\\
+\indent $\bullet$ \indent the order of $[a]$ in ${F^\times/F^{\times4}}$ is $4$. \\\\
+Here $[a]$ is the image of $a \in{F^{\times}}$ via the group homomorphism $F^{\times} \rightarrow F^{\times}/F^{\times4}$. \\\\
+This is an application of Proposition 1.7, part (2) in (Guillot, 2018, p. 5). \\\\
+Already we can deduce that $L$ contains a primitive $4^{th}$ root of unity: \\\\
+\indent By Galois theory, any irreducible polynomial $f(x)$ over F with one root in $L$ has \emph{all} its roots in $L$. \\\\
+\indent By ``all" roots, we of course mean every root of $f(x)$ in the \emph{algebraic closure} $\overline{F}$. \\\\
+\indent See Proposition 3.28, part (4) in (Morandi, 1996, p.36) for details. \\\\
+\indent We choose $f(x) = x^4 - a$, which is irreducible over F: \\\\ 
+\indent \indent $\bullet$ \indent $F$ is not a field of characteristic dividing the degree of $f$. \\\\
+\indent \indent $\bullet$ \indent Since the order of $[a]$ in ${F^\times/F^{\times4}}$ is $4$, $a$ does not have a fourth root in $F$.\\\\ 
+\indent \indent $\bullet$ \indent The problem states that $a$ is also not a square: $a \notin F^{\times2}$. \\\\
+\indent \indent All this shows that there is no linear or quadratic factor that can be split off from $f$.\\\\
+\indent \indent Such must be the case for a reducible polynomial of degree 4. \\\\
+\indent Nevertheless, $\sqrt[4]{a}$ is a root of $f$ lying in $L = F[\sqrt[4]{a}]$. \\\\
+\indent Therefore (by Proposition 3.28) all other roots of $f$ lie in $L$. \\\\
+\indent This includes $i\sqrt[4]{a}$, and $i = \sqrt{-1}$ is a primitive $4^{th}$ root of unity as promised. \\\\
+We further investigate this field extension, as we often do, by: \\\\
+\indent $\bullet$ \indent analyzing the action of $\textbf{Gal}(L/F)$ on $L$, and \\\\
+\indent $\bullet$ \indent using norms to construct field elements. \\\\
+Taking Guillot's hint: let $\alpha$ be of the form $\dfrac{\theta - \sigma^2(\theta)}{\sigma(\theta) - \sigma^3(\theta)}$. \\\\
+We will take $\theta$ to be a primitive $4^{th}$ root of unity, and $\sigma$ to be a generator of $\textbf{Gal}(L/F) \cong C_4$. \\\\
+Clearly, $\alpha$ lies in $L$. Since $\sigma$ acts linearly on the $4^{th}$ roots of unity, we have: \\\\
+\indent \indent $\sigma(\alpha) = \dfrac{\sigma(\theta) - \sigma^3(\theta)}{\sigma^2(\theta) - \theta} = -1/\alpha$. $(\ast)$ \\\\
+Note that the norm of $\alpha$ with respect to $L/F$ is given by $N_{L/F}(\alpha) = \alpha \, \sigma(\alpha) \, \sigma^2(\alpha)\, \sigma^3(\alpha)$. \\\\
+The norm with respect to $L/K$ involves only those powers of $\sigma$ that lie in $\textbf{Gal}(L/K)\triangleleft{\textbf{Gal}(L/F)}$. \\\\
+\indent Since $[L:F] = [L:K][K:F] = 4$, $[L:K]$ must be $2$. \\\\
+\indent Thus $\textbf{Gal}(L/K)$ is a subgroup of degree 2 in $G = \textbf{Gal}(L/F).$ \\\\
+\indent The only such subgroup is defined by $\{1_G, \sigma^2\}$. \\\\
+So $N_{L/K}(\alpha) = \alpha \, \sigma^2(\alpha)$, and this is just $\alpha^2$ by $(\ast)$ above. \\\\
+Since the domain of $N_{L/K}$ is $K$, we now know that $\alpha^2 \in K$. \\\\
+This means that $\alpha \in K$, and we can ask for its norm with respect to $K/F$. \\\\
+\indent The problem states that $K$ is generated as $F[\sqrt{a}].$ \\\\
+\indent So every element of $K$ is of the form $x + \sqrt{a}y$ for some $x, y \in F$. \\\\
+\indent We have $\textbf{Gal}(K/F) \cong C_2$, the non-identity element of which sends $\sqrt{a}$ to $-\sqrt{a}$. \\\\
+\indent This automorphism is just the restriction of $\sigma$  to $K$ denoted by $\sigma|_K$. \\\\
+\indent \indent To see this, observe that $\sigma$ cyclically permutes the roots of $f$ above. So $\sigma(\sqrt[4]a) = \theta \sqrt[4]{a}$. \\\\
+\indent \indent Therefore $\sigma(\sqrt[4]a) \, \sigma(\sqrt[4]a) = - \sqrt[4]a \, \sqrt[4]a$, which reduces to $\sigma(\sqrt{a}) = - \sqrt{a}$.\\\\
+So the norm of $\alpha$ with respect to $K/F$ is $\alpha \, \sigma|_K(\alpha)$. \\\\
+By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$, which completes the proof. $\square$ \\\\
+\pagebreak
+
+\noindent \textbf{PART 2} \\\\
+\indent \indent 
+\\
+\textbf{SOLUTION 1.2.2} \\\\
+\noindent $\square$
+
+\end{document}
