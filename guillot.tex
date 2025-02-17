@@ -6,10 +6,7 @@
 \usepackage[margin=1in]{geometry}
 
 \begin{document}
-there's a problem with this. how do you know that 'a' and 'a' are the same 'a'
-you could choose a 'b' instead, but you might have to show that 'b' and 'a' are compatible in some sense.
-this relieves you of the need to use the third bullet point 'The problem states, etc.'
-you can deduce the third bullet point from the second one, and also use this technique in 1.2. \\\\
+
 \noindent {\Large \textbf{PROBLEM 1.2}}  (Guillot, 2018, p. 21) \\\\
 \indent Let $F$ be a field of characteristic $p \neq 2$. Let $a \in F^\times{\setminus}F^{\times2}$, and $K = F[\sqrt{a}]$. \\\\
 \indent We do not assume that $\sqrt{-1} \in{F}$. \\\\
@@ -22,21 +19,21 @@ you can deduce the third bullet point from the second one, and also use this tec
 \\
 \textbf{SOLUTION 1.2.1} \\\\
 \noindent Since $\textbf{Gal}(L/F)$ is cyclic of degree $4$, we have: \\\\
-\indent $\bullet$ \indent $L = F[\sqrt[4]{a}]$ for some $a \in{F^{\times}}$, and \\\\
+\indent $\bullet$ \indent $L = F[\sqrt[4]{b}]$ for some $b \in{F^{\times}}$, and \\\\
 \indent $\bullet$ \indent the order of $[a]$ in ${F^\times/F^{\times4}}$ is $4$. \\\\
-Here $[a]$ is the image of $a \in{F^{\times}}$ via the group homomorphism $F^{\times} \rightarrow F^{\times}/F^{\times4}$. \\\\
+Here $[b]$ is the image of $b \in{F^{\times}}$ via the group homomorphism $F^{\times} \rightarrow F^{\times}/F^{\times4}$. \\\\
 This is an application of Proposition 1.7, part (2) in (Guillot, 2018, p. 5). \\\\
 Already we can deduce that $L$ contains a primitive $4^{th}$ root of unity: \\\\
-\indent By Galois theory, any irreducible polynomial $f(x)$ over F with one root in $L$ has \emph{all} its roots in $L$. \\\\
-\indent By ``all" roots we of course mean every root of $f(x)$ in the algebraic closure $\overline{F}$. \\\\
-\indent See Proposition 3.28, part (4) in (Morandi, 1996, p.36) for details. \\\\
-\indent We choose $f(x) = x^4 - a$, which is irreducible over F: \\\\ 
+\indent By Galois theory, \emph{any} irreducible polynomial $f(x)$ over F with one root in $L$ has \emph{all} its roots in $L$. \\\\
+\indent \indent By ``all" roots we of course mean every root of $f(x)$ in the algebraic closure $\overline{F}$. \\\\
+\indent \indent See Proposition 3.28, part (4) in (Morandi, 1996, p.36) for details. \\\\
+\indent We are free to let $a = b$ and $f(x) = x^4 - a$. The latter is irreducible over F: \\\\ 
 \indent \indent $\bullet$ \indent $F$ is not a field of characteristic dividing the degree of $f$. \\\\
-\indent \indent $\bullet$ \indent Since the order of $[a]$ in ${F^\times/F^{\times4}}$ is $4$, $a$ does not have a fourth root in $F$.\\\\ 
-\indent \indent $\bullet$ \indent The problem states that $a$ is also not a square: $a \notin F^{\times2}$. \\\\
+\indent \indent $\bullet$ \indent The problem also states that $a$ is not a square in $F^{\times}$. \\\\
+\indent \indent $\bullet$ \indent Since $a \notin F^{\times2}$, nor is it a fourth power in $F^{\times}$.\\\\ 
 \indent \indent All this shows that there is no linear or quadratic factor that can be split off from $f$.\\\\
 \indent \indent Such must be the case for a reducible polynomial of degree 4. \\\\
-\indent Nevertheless, $\sqrt[4]{a}$ is a root of $f$ lying in $L = F[\sqrt[4]{a}]$. \\\\
+\indent So $\sqrt[4]{a}$ is a root of $f$ lying in $L = F[\sqrt[4]{a}]$. \\\\
 \indent Therefore (by Proposition 3.28) all other roots of $f$ lie in $L$. \\\\
 \indent This includes $i\sqrt[4]{a}$, and $i = \sqrt{-1}$ is a primitive $4^{th}$ root of unity as promised. \\\\
 We further investigate this field extension, as we often do, by: \\\\
@@ -62,6 +59,9 @@ This means that $\alpha \in K$, and we can ask for its norm with respect to $K/F
 \indent \indent Therefore $\sigma(\sqrt[4]a) \, \sigma(\sqrt[4]a) = - \sqrt[4]a \, \sqrt[4]a$, which reduces to $\sigma(\sqrt{a}) = - \sqrt{a}$.\\\\
 So the norm of $\alpha$ with respect to $K/F$ is $\alpha \, \sigma|_K(\alpha)$. \\\\
 By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$, which completes the proof. $\square$ \\\\
+\\
+\textbf{Exercise:} What if we had not chosen $a = b$ above? Show that, in any case, $[a] = [b]$ in $F^{\times}/F^{\times4}$. \\\\
+\\
 \pagebreak
 
 \noindent \textbf{PART 2} \\\\
@@ -70,20 +70,25 @@ By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$, which c
 \indent \emph{Hint}: The case when $\alpha \in F$ must be treated separately. When $\alpha \notin F$, try $L = K[\sqrt{1+\alpha^2}]$. \\\\
 \\
 \textbf{SOLUTION 1.2.2} \\\\
-\noindent The element $\alpha$ is of the form $x + \sqrt{a} y$. If $\alpha \in F$, then $y = 0$. \\\\
-If $N_{K/F}(\alpha) = -1$, then $x^2 = -1$. This implies that $i = \sqrt{-1} \in F$. \\\\
-Since $F$ contains a primitive $4^{th}$ root of unity, we may apply \emph{The Fundamental Theorem of Kummer Theory}. \\\\
-See Theorem 1.25 in (Guillot, 2018, p. 14) for details. \\\\
-\indent If $a \in F^\times{\setminus}F^{\times4}$, there exists a cyclic extension of degree 4 generated as $L = F[\sqrt[4]{a}]$. \\\\
-\indent The order of $[a]$ in $F^\times/F^{\times4}$ is $4$ (where $[a]$ is again the class of $a$). \\\\
-It suffices to show that $a$ exists and therefore $F^\times/F^{\times4}$ is non-trivial. \\\\
-Indeed, $a$ \\\\
-$\square$ \\\\
+\noindent The element $\alpha$ is of the form $x + \sqrt{a} y$. If $\alpha \in F$: \\\\
+\indent We have $y = 0$. Since $N_{K/F}(\alpha) = -1$, then $x^2 = -1$. This implies that $i = \sqrt{-1} \in F$. \\\\
+\indent Since $F$ contains a primitive $4^{th}$ root of unity, we apply \emph{The Fundamental Theorem of Kummer Theory}. \\\\
+\indent \indent See Theorem 1.25 in (Guillot, 2018, p. 14) for details. \\\\
+\indent \indent If $b \in F^\times{\setminus}F^{\times4}$, there exists a cyclic extension of degree 4 generated as $L = F[\sqrt[4]{b}]$. \\\\
+\indent \indent The order of $[b]$ in $F^\times/F^{\times4}$ is $4$, where $[b]$ is the class of $b$. \\\\
+\indent It suffices to show that such an element exists and therefore $F^\times/F^{\times4}$ is non-trivial. \\\\
+\indent Indeed, $a$ is such an element: it is not a square and so not a fourth power in $F^\times$. \\\\
+\indent So the order of $[a]$ in $F^\times/F^{\times4}$ cannot be $2$ or $1$. It must be $4$. \\\\
+\indent Therefore, a cyclic extension $L/K$ of degree 4 exists. \\\\
+If $\alpha \notin F$, we take Guillot's hint and assume that $L = K[\sqrt{1+\alpha^2}]$. \\\\
+\indent \\\\
 
+$\square$ \\\\
+\\\\
 \noindent {\Large \textbf{REFERENCES}} \\\\
 
-\noindent Guillot, P. (2018). \emph{A Gentle Course in Local Class Field Theory: Local Number Fields, Brauer Groups, \linebreak \indent Galois Cohomology}. Cambridge: Cambridge University Press. \\
+\noindent Guillot, P. (2018). \emph{A Gentle Course in Local Class Field Theory: Local Number Fields, Brauer Groups, Galois Cohomology}. Cambridge: Cambridge University Press. \\
 
-\noindent Morandi, P. (1996). \emph{Field and Galois Theory}. Graduate Texts in Mathematics, vol 167. Springer, New York, \linebreak \indent NY. \\\\
+\noindent Morandi, P. (1996). \emph{Field and Galois Theory}. Graduate Texts in Mathematics, vol 167. Springer, New York, NY. \\\\
 
 \end{document}
