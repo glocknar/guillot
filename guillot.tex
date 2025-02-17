@@ -13,7 +13,7 @@
 \\
 \textbf{PART 1} \\\\
 \indent Suppose that there exists an extension $L/F$ with $K \subset L$. \\\\
-\indent Suppose further that $L/F$ is Galois with $\textbf{Gal}(L/F) \cong C_4$, the cyclic group of order 4. \\\\
+\indent Suppose further that $L/F$ is Galois with $\textbf{Gal}(L/F) \cong C_4$, the cyclic group of order $4$. \\\\
 \indent Show that there exists an $\alpha \in K$ such that $N_{K/F}(\alpha) = -1.$ \\\\
 \indent \emph{Hint}: try $\alpha = \dfrac{\theta - \sigma^2(\theta)}{\sigma(\theta) - \sigma^3(\theta)}$. \\\\
 \\
@@ -27,12 +27,12 @@ Already we can deduce that $L$ contains a primitive $4^{th}$ root of unity: \\\\
 \indent By Galois theory, \emph{any} irreducible polynomial $f(x)$ over F with one root in $L$ has \emph{all} its roots in $L$. \\\\
 \indent \indent By ``all" roots we of course mean every root of $f(x)$ in the algebraic closure $\overline{F}$. \\\\
 \indent \indent See Proposition 3.28, part (4) in (Morandi, 1996, p.36) for details. \\\\
-\indent We are free to let $a = b$ and $f(x) = x^4 - a$. The latter is irreducible over F: \\\\ 
+\indent We are free to let $b = a$ and $f(x) = x^4 - a$. The latter is irreducible over $F$: \\\\ 
 \indent \indent $\bullet$ \indent $F$ is not a field of characteristic dividing the degree of $f$. \\\\
 \indent \indent $\bullet$ \indent The problem also states that $a$ is not a square in $F^{\times}$. \\\\
 \indent \indent $\bullet$ \indent Since $a \notin F^{\times2}$, nor is it a fourth power in $F^{\times}$.\\\\ 
 \indent \indent All this shows that there is no linear or quadratic factor that can be split off from $f$.\\\\
-\indent \indent Such must be the case for a reducible polynomial of degree 4. \\\\
+\indent \indent Such must be the case for a reducible polynomial of degree $4$. \\\\
 \indent So $\sqrt[4]{a}$ is a root of $f$ lying in $L = F[\sqrt[4]{a}]$. \\\\
 \indent Therefore (by Proposition 3.28) all other roots of $f$ lie in $L$. \\\\
 \indent This includes $i\sqrt[4]{a}$, and $i = \sqrt{-1}$ is a primitive $4^{th}$ root of unity as promised. \\\\
@@ -41,12 +41,12 @@ We further investigate this field extension, as we often do, by: \\\\
 \indent $\bullet$ \indent using norms to construct field elements. \\\\
 Taking Guillot's hint: let $\alpha$ be of the form $\dfrac{\theta - \sigma^2(\theta)}{\sigma(\theta) - \sigma^3(\theta)}$. \\\\
 We will take $\theta$ to be a primitive $4^{th}$ root of unity, and $\sigma$ to be a generator of $\textbf{Gal}(L/F) \cong C_4$. \\\\
-Clearly, $\alpha$ lies in $L$. Since $\sigma$ acts linearly on the $4^{th}$ roots of unity, we have: \\\\
+Clearly, $\alpha$ lies in $L$. Since $\sigma$ acts linearly on $L$, we have: \\\\
 \indent \indent $\sigma(\alpha) = \dfrac{\sigma(\theta) - \sigma^3(\theta)}{\sigma^2(\theta) - \theta} = -1/\alpha$. $(\ast)$ \\\\
 Note that the norm of $\alpha$ with respect to $L/F$ is given by $N_{L/F}(\alpha) = \alpha \, \sigma(\alpha) \, \sigma^2(\alpha)\, \sigma^3(\alpha)$. \\\\
 The norm with respect to $L/K$ involves only those powers of $\sigma$ that lie in $\textbf{Gal}(L/K)\triangleleft{\textbf{Gal}(L/F)}$. \\\\
 \indent Since $[L:F] = [L:K][K:F] = 4$, $[L:K]$ must be $2$. \\\\
-\indent Thus $\textbf{Gal}(L/K)$ is a subgroup of degree 2 in $G = \textbf{Gal}(L/F).$ \\\\
+\indent Thus $\textbf{Gal}(L/K)$ is a subgroup of degree $2$ in $G = \textbf{Gal}(L/F).$ \\\\
 \indent The only such subgroup is defined by $\{1_G, \sigma^2\}$. \\\\
 So $N_{L/K}(\alpha) = \alpha \, \sigma^2(\alpha)$, and this is just $\alpha^2$ by $(\ast)$ above. \\\\
 Since the domain of $N_{L/K}$ is $K$, we now know that $\alpha^2 \in K$. \\\\
@@ -59,14 +59,11 @@ This means that $\alpha \in K$, and we can ask for its norm with respect to $K/F
 \indent \indent Therefore $\sigma(\sqrt[4]a) \, \sigma(\sqrt[4]a) = - \sqrt[4]a \, \sqrt[4]a$, which reduces to $\sigma(\sqrt{a}) = - \sqrt{a}$.\\\\
 So the norm of $\alpha$ with respect to $K/F$ is $\alpha \, \sigma|_K(\alpha)$. \\\\
 By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$, which completes the proof. $\square$ \\\\
-\\
-\textbf{Exercise:} What if we had not chosen $a = b$ above? Show that, in any case, $[a] = [b]$ in $F^{\times}/F^{\times4}$. \\\\
-\\
 \pagebreak
 
 \noindent \textbf{PART 2} \\\\
 \indent Let $\alpha \in K$ be an element with norm $N_{K/F}(\alpha) = -1$. \\\\
-\indent Show that this implies the existence of a cyclic extension $L/K$ of degree 4. \\\\
+\indent Show that this implies the existence of a cyclic extension $L/F$ of degree 4. \\\\
 \indent \emph{Hint}: The case when $\alpha \in F$ must be treated separately. When $\alpha \notin F$, try $L = K[\sqrt{1+\alpha^2}]$. \\\\
 \\
 \textbf{SOLUTION 1.2.2} \\\\
@@ -78,17 +75,22 @@ By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$, which c
 \indent \indent The order of $[b]$ in $F^\times/F^{\times4}$ is $4$, where $[b]$ is the class of $b$. \\\\
 \indent It suffices to show that such an element exists and therefore $F^\times/F^{\times4}$ is non-trivial. \\\\
 \indent Indeed, $a$ is such an element: it is not a square and so not a fourth power in $F^\times$. \\\\
-\indent So the order of $[a]$ in $F^\times/F^{\times4}$ cannot be $2$ or $1$. It must be $4$. \\\\
+\indent So the order of $[a]$ in $F^\times/F^{\times4}$ cannot be $2$ or $1$: It must be $4$. \\\\
 \indent Therefore, a cyclic extension $L/K$ of degree $4$ exists. \\\\
 If $\alpha \notin F$, we take Guillot's hint and assume that $L = K[\sqrt{1+\alpha^2}]$. \\\\
-\indent \\\\
+\indent Note that every extension of degree $2$ over a field whose characteristic $\neq 2$ is Galois. \\\\
+\indent Since $a \notin F^{\times2}$ and $K = F[\sqrt{a}]$, $\textbf{Gal}(K/F) \cong C_2$. Let $\sigma$ be the non-identity. \\\\
+\indent Since $\sigma$ acts linearly, we also have $N_{K/F}(1 + \alpha^2) = (1 + \alpha^2) \, (1 + \sigma(\alpha)^2).$ \\\\
+\indent Recall that $N_{K/F}(\alpha) = \alpha \, \sigma(\alpha) = -1$, and so $\alpha^2 \, \sigma(\alpha)^2 = 1$. \\\\
+\indent Applying these ``identities", we get $N_{K/F}(1 + \alpha^2) = 2 + \alpha^2 + \sigma(\alpha)^2 = (\alpha - \sigma(\alpha))^2$. \\\\
+\indent From this we can see that $N_{K/F}(1 + \alpha^2) \in K^{\times2}$. \\\\
+\indent If $(1 + \alpha^2)$ itself lies in $K^{\times2}$, then its norm must also lie in $F^{\times2}$. \\\\
+\indent This cannot be the case since \\\\
+\indent $\square$ \\\\
+\pagebreak
 
-$\square$ \\\\
-\\\\
 \noindent {\Large \textbf{REFERENCES}} \\\\
-
-\noindent Guillot, Pierre. (2018). \emph{A Gentle Course in Local Class Field Theory: Local Number Fields, Brauer Groups, Galois Cohomology}. Cambridge: Cambridge University Press. \\
-
+\noindent Guillot, Pierre. (2018). \emph{A Gentle Course in Local Class Field Theory: Local Number Fields, Brauer Groups, Galois Cohomology}. Cambridge: Cambridge University Press. \\\\
 \noindent Morandi, Patrick. (1996). \emph{Field and Galois Theory}. Graduate Texts in Mathematics, vol 167. Springer, New York, NY. \\\\
 
 \end{document}
