@@ -44,7 +44,7 @@ We will take $\theta$ to be a primitive $4^{th}$ root of unity, and $\sigma$ to 
 Clearly, $\alpha$ lies in $L$. Since $\sigma$ acts linearly on $L$, we have: \\\\
 \indent \indent $\sigma(\alpha) = \dfrac{\sigma(\theta) - \sigma^3(\theta)}{\sigma^2(\theta) - \theta} = -1/\alpha$. $(\ast)$ \\\\
 Note that the norm of $\alpha$ with respect to $L/F$ is given by $N_{L/F}(\alpha) = \alpha \, \sigma(\alpha) \, \sigma^2(\alpha)\, \sigma^3(\alpha)$. \\\\
-The norm with respect to $L/K$ involves only those powers of $\sigma$ that lie in $\textbf{Gal}(L/K)\triangleleft{\textbf{Gal}(L/F)}$. \\\\
+On the other hand, $N_{L/K}(\alpha)$ involves only those powers of $\sigma$ that lie in $\textbf{Gal}(L/K)\triangleleft{\textbf{Gal}(L/F)}$. \\\\
 \indent Since $[L:F] = [L:K][K:F] = 4$, $[L:K]$ must be $2$. \\\\
 \indent So $\textbf{Gal}(L/K)$ is a subgroup of degree $2$ in $G = \textbf{Gal}(L/F).$ \\\\
 \indent The only such subgroup is defined by $\{1_G, \sigma^2\}$. \\\\
@@ -69,19 +69,22 @@ By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\squar
 \indent \emph{Hint}: The case when $\alpha \in F$ must be treated separately. When $\alpha \notin F$, try $L = K[\sqrt{1+\alpha^2}]$. \\\\
 \\
 \textbf{SOLUTION 1.2.2} \\\\
-\noindent The element $\alpha$ is of the form $x + \sqrt{a} y$ for some $x, y \in F$. If $\alpha \in F$: \\\\
+\noindent The element $\alpha$ is of the form $x + \sqrt{a} y$ for some $x, y \in F$. First, suppose $\alpha \in F$: \\\\
 \indent We have $y = 0$. Since $N_{K/F}(\alpha) = -1$, we also have $x^2 = -1$. \\\\
 \indent This implies that $i = \sqrt{-1} \in F$. Since $F$ contains a primitive $4^{th}$ root of unity: \\\\
-\indent Therefore we may apply $\emph{The Fundamental Theorem of Kummer Theory}$: \\\\ 
-\indent \indent The finite subgroup $A = \dfrac{F^\times \cap K^{\times4}}{F^{\times4}} \subset F^\times/F^{\times n}$ gives rise to a Galois extension $L/K$. \\\\
-\indent \indent If $L/K$ is of degree $n$, then $L$ is generated as $F[\sqrt[n]{b}]$ for some $b$ in $[b] \in F^\times/F^{\times n}$. \\\\
-\indent \indent The order of $[b]$ in $F^\times/F^{\times n}$ is $n$. \\\\
+\indent Therefore we may apply a version of $\emph{The Fundamental Theorem of Kummer Theory}$: \\\\ 
+\indent \indent Subgroups $[b]$ of order $n \geq 1$ in $F^\times/F^{\times n}$ give rise to cyclic Galois extensions of degree $n$. \\\\
+\indent \indent Let $L/F$ be such an extension. Then $L$ is generated as $F[\sqrt[n]{b}]$ for any $b$ in the class $[b]$. \\\\
 \indent \indent See \textbf{Theorem 1.25} in (Guillot, 2018, p. 14) for the full theorem. \\\\
-\indent It suffices to show that such an element $b$ and its equivalence class $[b]$ exist for $n = 4$. \\\\
-\indent Indeed, $a$ is such an element: it is not a square and not a fourth power in $F^\times$. \\\\
-\indent So the order of $[a]$ in $F^\times/F^{\times4}$ --- which divides the $|A| = 4$ --- cannot be $2$ or $1$: \\\\
-\indent The order of $[a]$ must be $4$. So a cyclic extension $L/K$ of degree $4$ exists. \\\\
-If $\alpha \notin F$, we take Guillot's hint and try $L = K[\sqrt{1+\alpha^2}]$. \\\\
+\indent It suffices to show that such a generating element and its equivalence class exist for $n = 4$. \\\\
+\indent Before we prove this, observe that the exponent of $F^\times/F^{\times4}$ is $4$. \\\\
+\indent \indent Indeed, every element of $[b]$ is of the form $bx^{4m}$ for some $b \in F^\times{\setminus}F^{\times4}$ and $m \geq 0$. \\\\
+\indent \indent If the order of $bx^{4m}$ in $F^\times{\setminus}F^{\times4}$ exceeds $4$, then . \\\\
+\indent By group theory, the order of any subgroup $[b]$ in $F^\times/F^{\times4}$ must divide $4$. \\\\
+\indent Now it is clear that we may choose $b = a$ and $[b] = [a]$: \\\\
+\indent \indent Since $a$ is not a square or a fourth power in $F^\times$, the order of $[a]$ cannot be $2$ or $1$ (resp.). \\\\
+\indent \indent So the order of $[a]$ is $4$, and a cyclic extension $L/K$ of degree $4$ exists. \\\\
+Now suppose $\alpha \notin F$. We take Guillot's hint and try $L = K[\sqrt{1+\alpha^2}]$. \\\\
 \indent Note that any extension of degree $2$ over a field of characteristic $p \neq 2$ is Galois. \\\\
 \indent Since $a \notin F^{\times2}$ and $K = F[\sqrt{a}]$, $K/F$ is Galois with $\textbf{Gal}(K/F) \cong C_2$. \\\\
 \indent Let $\sigma$ be the non-identity. Since $\sigma$ acts linearly, we have \\\\
@@ -118,6 +121,7 @@ This proves that (b) $\implies$ (a). \\\\
 Conversely, if $N_{K/F}(\alpha) = -1$, then $(x + \sqrt{a}y) \cdot (x - \sqrt{a}y) = x^2 - ay^2 = -1$. \\\\
 We can rearrange this as $a = \left(\dfrac{1}{y}\right)^2 + \left(\dfrac{x}{y}\right)^2$, which is a sum of squares in $F$. \\\\
 This proves that (a) $\implies$ (b). $\square$ \\\\
+\pagebreak
 
 \noindent {\Large \textbf{REFERENCES}} \\\\
 \noindent Guillot, Pierre. (2018). \emph{A Gentle Course in Local Class Field Theory: Local Number Fields, Brauer Groups, Galois Cohomology}. Cambridge: Cambridge University Press. \\\\
