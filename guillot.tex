@@ -55,8 +55,8 @@ This means that $\alpha \in K$, and we can ask for its norm with respect to $K/F
 \indent So every element of $K$ is of the form $x + \sqrt{a}y$ for some $x, y \in F$. \\\\
 \indent We have $\textbf{Gal}(K/F) \cong C_2$, the non-identity of which sends $\sqrt{a}$ to $-\sqrt{a}$. \\\\
 \indent This automorphism is just the restriction of $\sigma \in \textbf{Gal}(L/F)$  to $K$, denoted by $\sigma|_K$. \\\\
-\indent \indent In other words, the preimage of conjugation in $K$ via $\dfrac{\textbf{Gal}(L/F)}{\textbf{Gal}(L/K)} \cong \textbf{Gal}(K/F)$ is $\sigma|_K$. \\\\
-\indent \indent To see this more clearly, observe that $\sigma$ cyclically permutes the roots of $f$ above. \\\\
+\indent \indent In other words,  $\sigma|_K$ is the preimage of conjugation in $K$ via $\dfrac{\textbf{Gal}(L/F)}{\textbf{Gal}(L/K)} \cong \textbf{Gal}(K/F)$. \\\\
+\indent \indent To see this more clearly, observe that $\sigma$ cyclically permutes the roots of $f(x)$ above. \\\\
 \indent \indent So $\sigma(\sqrt[4]a) = \theta \sqrt[4]{a}$. Therefore $\sigma(\sqrt[4]{a}) \, \sigma(\sqrt[4]{a}) = - \sqrt[4]{a} \, \sqrt[4]{a} = - \sqrt{a}$. \\\\
 \indent \indent By the linearity of $\sigma$, the left-hand side reduces so that $\sigma(\sqrt{a}) = - \sqrt{a}$.\\\\
 Finally, the norm of $\alpha$ with respect to $K/F$ is $\alpha \, \sigma|_K(\alpha)$. \\\\
@@ -69,14 +69,13 @@ By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\squar
 \indent \emph{Hint}: The case when $\alpha \in F$ must be treated separately. When $\alpha \notin F$, try $L = K[\sqrt{1+\alpha^2}]$. \\\\
 \\
 \textbf{SOLUTION 1.2.2} \\\\
-\noindent The element $\alpha$ is of the form $x + \sqrt{a} y$ for some $x, y \in F$. \\\\
-If $\alpha \in F$: \\\\
+\noindent The element $\alpha$ is of the form $x + \sqrt{a} y$ for some $x, y \in F$. If $\alpha \in F$: \\\\
 \indent We have $y = 0$. Since $N_{K/F}(\alpha) = -1$, we also have $x^2 = -1$. This implies that $i = \sqrt{-1} \in F$. \\\\
 \indent Since $F$ contains a primitive $4^{th}$ root of unity, we apply \emph{The Fundamental Theorem of Kummer Theory}. \\\\
 \indent \indent If $b \in F^\times{\setminus}F^{\times4}$, there exists a cyclic extension of degree 4 generated as $L = F[\sqrt[4]{b}]$. \\\\
 \indent \indent The order of $[b]$ in $F^\times/F^{\times4}$ is $4$, where $[b]$ is the class of $b$. \\\\
 \indent \indent See \textbf{Theorem 1.25} in (Guillot, 2018, p. 14) for details. \\\\
-\indent It suffices to show that such an element exists and therefore $F^\times/F^{\times4}$ is non-trivial. \\\\
+\indent It suffices to show that such an element $b$ exists and therefore $F^\times/F^{\times4}$ is non-trivial. \\\\
 \indent Indeed, $a$ is such an element: it is not a square and not a fourth power in $F^\times$. \\\\
 \indent So the order of $[a]$ in $F^\times/F^{\times4}$ --- which divides $|F^\times/F^{\times4}| = 4$ --- cannot be $2$ or $1$: \\\\
 \indent The order of $[a]$ must be $4$, and a cyclic extension $L/K$ of degree $4$ exists. \\\\
@@ -95,7 +94,7 @@ If $\alpha \notin F$, we take Guillot's hint and try $L = K[\sqrt{1+\alpha^2}]$.
 \indent So the order of $[1 + \alpha^2]$ in $K^\times/K^{\times4}$ cannot be $1$ or $2$: It must be $4$. \\\\
 \indent Consider the group homomorphism $g: F^\times/F^{\times4} \rightarrow K^\times/K^{\times4}$. \\\\ 
 \indent \indent Since every finite subgroup of a field is cyclic, $g$ is an isomorophism. \\\\  
-\indent \indent By the uniqueness of $C_4$, we have $F^\times/F^{\times4} \cong C_4 \cong K^\times/K^{\times4}$. \\\\ 
+\indent \indent Indeed, by the uniqueness of $C_4$, we have $F^\times/F^{\times4} \cong C_4 \cong K^\times/K^{\times4}$. \\\\ 
 \indent \indent This is an application of \textbf{Lemma 1.1} in (Guillot, 2018, p. 3). \\\\
 \indent Since isomorphisms preserve group order, the preimage $g^{-1}([1 + \alpha^2])$ has order $4$. \\\\
 \indent We have again shown that $F^\times/F^{\times4}$ is non-trivial. \\\\
@@ -118,6 +117,7 @@ This proves that (b) $\implies$ (a). \\\\
 Conversely, if $N_{K/F}(\alpha) = -1$, then $(x + \sqrt{a}y) \cdot (x - \sqrt{a}y) = x^2 - ay^2 = -1$. \\\\
 We can rearrange this as $a = \left(\dfrac{1}{y}\right)^2 + \left(\dfrac{x}{y}\right)^2$, which is a sum of squares in $F$. \\\\
 This proves that (a) $\implies$ (b). $\square$ \\\\
+\pagebreak
 
 \noindent {\Large \textbf{REFERENCES}} \\\\
 \noindent Guillot, Pierre. (2018). \emph{A Gentle Course in Local Class Field Theory: Local Number Fields, Brauer Groups, Galois Cohomology}. Cambridge: Cambridge University Press. \\\\
