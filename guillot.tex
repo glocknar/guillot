@@ -71,14 +71,13 @@ By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\squar
 \textbf{SOLUTION 1.2.2} \\\\
 \noindent The element $\alpha$ is of the form $x + \sqrt{a} y$ for some $x, y \in F$. If $\alpha \in F$: \\\\
 \indent We have $y = 0$. Since $N_{K/F}(\alpha) = -1$, we also have $x^2 = -1$. This implies that $i = \sqrt{-1} \in F$. \\\\
-\indent Since $F$ contains a primitive $4^{th}$ root of unity, we apply \emph{The Fundamental Theorem of Kummer Theory}. \\\\
-\indent \indent If $b \in F^\times{\setminus}F^{\times4}$, there exists a cyclic extension of degree 4 generated as $L = F[\sqrt[4]{b}]$. \\\\
-\indent \indent The order of $[b]$ in $F^\times/F^{\times4}$ is $4$, where $[b]$ is the class of $b$. \\\\
-\indent \indent See \textbf{Theorem 1.25} in (Guillot, 2018, p. 14) for details. \\\\
-\indent It suffices to show that such an element $b$ exists and therefore $F^\times/F^{\times4}$ is non-trivial. \\\\
+\indent Since $F$ contains a primitive $4^{th}$ root of unity: \\\\
+\indent \indent If $b \in F^\times{\setminus}F^{\times n}$, there exists a cyclic extension of degree n generated as $L = F[\sqrt[n]{b}]$. \\\\
+\indent \indent The order of $[b]$ in $F^\times/F^{\times n}$ is $n$, where $[b]$ is the class of $b$. \\\\
+\indent It suffices to show that such an element $b$ and its class $[b]$ exist for $n = 4$. \\\\
 \indent Indeed, $a$ is such an element: it is not a square and not a fourth power in $F^\times$. \\\\
-\indent So the order of $[a]$ in $F^\times/F^{\times4}$ --- which divides $|F^\times/F^{\times4}| = 4$ --- cannot be $2$ or $1$: \\\\
-\indent The order of $[a]$ must be $4$, and a cyclic extension $L/K$ of degree $4$ exists. \\\\
+\indent So the order of $[a]$ in $F^\times/F^{\times4}$ --- which divides the order of $\dfrac{F^\times \cap K^{\times4}}{F^{\times4}} = 4$ --- cannot be $2$ or $1$: \\\\
+\indent The order of $[a]$ must be $4$. So a cyclic extension $L/K$ of degree $4$ exists. \\\\
 If $\alpha \notin F$, we take Guillot's hint and try $L = K[\sqrt{1+\alpha^2}]$. \\\\
 \indent Note that any extension of degree $2$ over a field of characteristic $p \neq 2$ is Galois. \\\\
 \indent Since $a \notin F^{\times2}$ and $K = F[\sqrt{a}]$, $K/F$ is Galois with $\textbf{Gal}(K/F) \cong C_2$. \\\\
@@ -91,14 +90,14 @@ If $\alpha \notin F$, we take Guillot's hint and try $L = K[\sqrt{1+\alpha^2}]$.
 \indent This cannot be the case since $(\alpha - \sigma(\alpha))^2 = 4y^2a$  does not lie in $F^{\times2}$. \\\\
 \indent \indent While $4y^2$ is a square, recall that we have assumed $a \notin F^{\times2}$. \\\\
 \indent Therefore, $1 + \alpha^2$ is not a fourth power in $K^{\times}$, nor is it a square. \\\\
-\indent So the order of $[1 + \alpha^2]$ in $K^\times/K^{\times4}$ cannot be $1$ or $2$: It must be $4$. \\\\
-\indent Consider the group homomorphism $g: F^\times/F^{\times4} \rightarrow K^\times/K^{\times4}$. \\\\ 
+\indent So the order of $[1 + \alpha^2]$ in $\dfrac{K^\times \cap L^{\times4}}{K^{\times4}} = 4$ cannot be $1$ or $2$: It must be $4$. \\\\
+\indent Consider the group homomorphism $g: \dfrac{F^\times \cap K^{\times4}}{F^{\times4}} \rightarrow \dfrac{K^\times \cap L^{\times4}}{K^{\times4}}$. \\\\ 
 \indent \indent Since every finite subgroup of a field is cyclic, $g$ is an isomorophism. \\\\  
-\indent \indent Indeed, by the uniqueness of $C_4$, we have $F^\times/F^{\times4} \cong C_4 \cong K^\times/K^{\times4}$. \\\\ 
+\indent \indent Indeed, by the uniqueness of $C_4$, we have $\dfrac{F^\times \cap K^{\times4}}{F^{\times4}} \cong C_4 \cong \dfrac{K^\times \cap L^{\times4}}{K^{\times4}}$. \\\\ 
 \indent \indent This is an application of \textbf{Lemma 1.1} in (Guillot, 2018, p. 3). \\\\
 \indent Since isomorphisms preserve group order, the preimage $g^{-1}([1 + \alpha^2])$ has order $4$. \\\\
-\indent We have again shown that $F^\times/F^{\times4}$ is non-trivial. \\\\
-\indent So, by the fundamental theorem, a cyclic extension $L/K$ of degree $4$ exists. $\square$ \\\\
+\indent Therefore the order of $[1 + \alpha^2]$ in $F^\times/F^{\times4} = 4$. \\\\
+\indent So $1 + \alpha^2$ generates cyclic extension $L/F$ of degree $4$. $\square$ \\\\
 \\
 
 \noindent \textbf{PART 3} \\\\
