@@ -79,7 +79,7 @@ If $\alpha \in F$: \\\\
 \indent It suffices to show that such an element exists and therefore $F^\times/F^{\times4}$ is non-trivial. \\\\
 \indent Indeed, $a$ is such an element: it is not a square and not a fourth power in $F^\times$. \\\\
 \indent So the order of $[a]$ in $F^\times/F^{\times4}$ --- which divides $|F^\times/F^{\times4}| = 4$ --- cannot be $2$ or $1$: \\\\
-\indent It must be $4$, and a cyclic extension $L/K$ of degree $4$ exists. \\\\
+\indent The order of $[a]$ must be $4$, and a cyclic extension $L/K$ of degree $4$ exists. \\\\
 If $\alpha \notin F$, we take Guillot's hint and try $L = K[\sqrt{1+\alpha^2}]$. \\\\
 \indent Note that any extension of degree $2$ over a field of characteristic $p \neq 2$ is Galois. \\\\
 \indent Since $a \notin F^{\times2}$ and $K = F[\sqrt{a}]$, $K/F$ is Galois with $\textbf{Gal}(K/F) \cong C_2$. \\\\
@@ -87,8 +87,8 @@ If $\alpha \notin F$, we take Guillot's hint and try $L = K[\sqrt{1+\alpha^2}]$.
 \indent \indent $N_{K/F}(1 + \alpha^2) = (1 + \alpha^2) \, \sigma(1 + \alpha^2) = (1 + \alpha^2) \, (1 + \sigma(\alpha)^2).$ \\\\
 \indent Recall that $N_{K/F}(\alpha) = \alpha \, \sigma(\alpha) = -1$, and so $\alpha^2 \, \sigma(\alpha)^2 = 1$. \\\\
 \indent Applying these formulae, we get $N_{K/F}(1 + \alpha^2) = (\alpha - \sigma(\alpha))^2$. \\\\
-\indent If $1 + \alpha^2$ itself lies in $K^{\times2}$, then $N_{K/F}(1 + \alpha^2) = N_{K/F}(\beta)^2$ for some $\beta \in K$. \\\\
-\indent But $N_{K/F}(\beta) \in F$ which implies that $N_{K/F}(1 + \alpha^2)$ lies in $F^{\times2}$. \\\\
+\indent Now, if $1 + \alpha^2$ itself lies in $K^{\times2}$, then $N_{K/F}(1 + \alpha^2) = N_{K/F}(\beta)^2$ for some $\beta \in K$. \\\\
+\indent But $N_{K/F}(\beta) \in F$, which implies that $N_{K/F}(1 + \alpha^2)$ lies in $F^{\times2}$. \\\\
 \indent This cannot be the case since $(\alpha - \sigma(\alpha))^2 = 4y^2a$  does not lie in $F^{\times2}$. \\\\
 \indent \indent While $4y^2$ is a square, recall that we have assumed $a \notin F^{\times2}$. \\\\
 \indent Therefore, $1 + \alpha^2$ is not a fourth power in $K^{\times}$, nor is it a square. \\\\
