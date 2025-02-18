@@ -33,35 +33,35 @@ Already we can deduce that $L$ contains a primitive $4^{th}$ root of unity: \\\\
 \indent \indent $\bullet$ \indent Since $a \notin F^{\times2}$, nor is it a fourth power in $F^{\times}$.\\\\ 
 \indent \indent All this shows that there is no linear or quadratic factor that can be split off from $f$.\\\\
 \indent \indent Such must be the case for a reducible polynomial of degree $4$. \\\\
-\indent So $\sqrt[4]{a}$ is a root of $f$ lying in $L = F[\sqrt[4]{a}]$. \\\\
-\indent Therefore (by \textbf{Proposition 3.28}) all other roots of $f$ lie in $L$. \\\\
-\indent This includes $i\sqrt[4]{a}$, and $i = \sqrt{-1}$ is a primitive $4^{th}$ root of unity as promised. \\\\
+\indent So $\sqrt[4]{a}$ is a root of $f$ lying in $L = F[\sqrt[4]{a}]$. By \textbf{Proposition 3.28} all other roots of $f$ lie in $L$. \\\\
+\indent That would include $i\sqrt[4]{a}$, and $i = \sqrt{-1}$ is a primitive $4^{th}$ root of unity as promised. \\\\
 We further investigate this field extension, as we often do, by: \\\\
 \indent $\bullet$ \indent analyzing the (mercifully linear) action of $\textbf{Gal}(L/F)$ on $L$, and \\\\
-\indent $\bullet$ \indent using norms to construct field elements (or to prove that they don't exist). \\\\
+\indent $\bullet$ \indent using norms to construct field elements (or, to prove that they don't exist). \\\\
 Taking Guillot's hint: let $\alpha$ be of the form $\dfrac{\theta - \sigma^2(\theta)}{\sigma(\theta) - \sigma^3(\theta)}$. \\\\
 We will take $\theta$ to be a primitive $4^{th}$ root of unity, and $\sigma$ to be a generator of $\textbf{Gal}(L/F) \cong C_4$. \\\\
 Clearly, $\alpha$ lies in $L$. Since $\sigma$ acts linearly on $L$, we have: \\\\
-\indent \indent $\sigma(\alpha) = \dfrac{\sigma(\theta) - \sigma^3(\theta)}{\sigma^2(\theta) - \theta} = -1/\alpha$. $(\ast)$ \\\\
+\indent $\sigma(\alpha) = \dfrac{\sigma(\theta) - \sigma^3(\theta)}{\sigma^2(\theta) - \theta} = -1/\alpha$. $(\ast)$ \\\\
 Note that the norm of $\alpha$ with respect to $L/F$ is given by $N_{L/F}(\alpha) = \alpha \, \sigma(\alpha) \, \sigma^2(\alpha)\, \sigma^3(\alpha)$. \\\\
 On the other hand, $N_{L/K}(\alpha)$ involves only those powers of $\sigma$ that lie in $\textbf{Gal}(L/K)\triangleleft{\textbf{Gal}(L/F)}$. \\\\
 \indent Since $[L:F] = [L:K][K:F] = 4$, $[L:K]$ must be $2$. \\\\
 \indent So $\textbf{Gal}(L/K)$ is a subgroup of degree $2$ in $G = \textbf{Gal}(L/F).$ \\\\
-\indent The only such subgroup is defined by $\{1_G, \sigma^2\}$. \\\\
+\indent The only such subgroup is given by $\{1_G, \sigma^2\}$. \\\\
 So $N_{L/K}(\alpha) = \alpha \, \sigma^2(\alpha)$, and this is just $\alpha^2$ by $(\ast)$ above. \\\\
 Since the image of $N_{L/K}$ is $K$, we now know that $\alpha^2 \in K$. \\\\
-This means that $\alpha \in K$, and we can ask for its norm with respect to $K/F$. \\\\
-\indent The problem states that $K$ is generated as $F[\sqrt{a}].$ \\\\
-\indent So every element of $K$ is of the form $x + \sqrt{a}y$ for some $x, y \in F$. \\\\
-\indent We have $\textbf{Gal}(K/F) \cong C_2$, the non-identity of which sends $\sqrt{a}$ to $-\sqrt{a}$. \\\\
-\indent This automorphism is just the restriction of $\sigma \in \textbf{Gal}(L/F)$  to $K$, denoted by $\sigma|_K$. \\\\
-\indent \indent In other words,  $\sigma|_K$ is the preimage of conjugation in $K$ via $\dfrac{\textbf{Gal}(L/F)}{\textbf{Gal}(L/K)} \cong \textbf{Gal}(K/F)$. \\\\
-\indent \indent To see this more clearly, observe that $\sigma$ cyclically permutes the roots of $f(x)$ above. \\\\
-\indent \indent So $\sigma(\sqrt[4]a) = \theta \sqrt[4]{a}$. Therefore $\sigma(\sqrt[4]{a}) \, \sigma(\sqrt[4]{a}) = - \sqrt[4]{a} \, \sqrt[4]{a} = - \sqrt{a}$. \\\\
+This implies that $\alpha \in K$. We can ask for $N_{K/F}(\alpha)$ once we know $\textbf{Gal}(K/F)$. \\\\
+\indent The problem states that $K$ is generated as $F[\sqrt{a}]$ for some $a \notin F^{\times2}$ \\\\
+\indent So every element of $K$ is of the form $x + \sqrt{a}y$ for some $x, y \in F$ and $[K:F] = 2$. \\\\
+\indent Any extension $K/F$ of degree $2$ over a field of characteristic $p \neq 2$ is Galois. \\\\ 
+\indent $\textbf{Gal}(K/F) \cong C_2$, and the non-identity element sends $\sqrt{a}$ to $-\sqrt{a}$. \\\\
+The non-identity in $\textbf{Gal}(K/F)$ is just the restriction to $K$ of $\sigma \in \textbf{Gal}(L/F)$, denoted by $\sigma|_K$. \\\\
+\indent In other words,  the preimage of conjugation in $K$ via $\dfrac{\textbf{Gal}(L/F)}{\textbf{Gal}(L/K)} \cong \textbf{Gal}(K/F)$ is $\sigma|_K$. \\\\
+\indent To see this more clearly: \\\\
+\indent \indent Observe that $\sigma$ cyclically permutes the roots of $f(x)$ above. \\\\
+\indent \indent We have $\sigma(\sqrt[4]a) = \theta \sqrt[4]{a}$. Therefore $\sigma(\sqrt[4]{a}) \, \sigma(\sqrt[4]{a}) = - \sqrt[4]{a} \, \sqrt[4]{a} = - \sqrt{a}$. \\\\
 \indent \indent By the linearity of $\sigma$, the leftmost side reduces so that $\sigma(\sqrt{a}) = - \sqrt{a}$.\\\\
 Finally, the norm of $\alpha$ with respect to $K/F$ is $\alpha \, \sigma|_K(\alpha)$. \\\\
 By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\square$ \\\\
-\pagebreak
 
 \noindent \textbf{PART 2} \\\\
 \indent Let $\alpha \in K$ be an element with norm $N_{K/F}(\alpha) = -1$. \\\\
@@ -70,15 +70,16 @@ By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\squar
 \\
 \textbf{SOLUTION 1.2.2} \\\\
 \noindent The element $\alpha$ is of the form $x + \sqrt{a} y$ for some $x, y \in F$. First, suppose $\alpha \in F$: \\\\
-\indent We have $y = 0$. Since $N_{K/F}(\alpha) = -1$, we also have $x^2 = -1$. \\\\
-\indent This implies that $i = \sqrt{-1} \in F$. Since $F$ contains a primitive $4^{th}$ root of unity: \\\\
-\indent Therefore we may apply a version of $\emph{The Fundamental Theorem of Kummer Theory}$: \\\\ 
-\indent \indent Non-trivial subgroups $[b]$ of order $n \geq 1$ in $F^\times/F^{\times n}$ give rise to Galois extensions of degree $n$. \\\\
-\indent \indent Let $L/F$ be such an extension. Then $L$ is generated as $F[\sqrt[n]{b}]$ for any $b$ in the class $[b]$. \\\\
+\indent We have $y = 0$. Since $N_{K/F}(\alpha) = -1$ by assumption, we also have $x^2 = -1$. \\\\
+\indent This implies that $i = \sqrt{-1} \in F$. So $F$ contains a primitive $4^{th}$ root of unity: \\\\
+\indent Therefore we may apply a (limited) version of $\emph{The Fundamental Theorem of Kummer Theory}$: \\\\ 
+\indent \indent Subgroups of order $n \geq 1$ in $F^\times/F^{\times n}$ give rise to Galois extensions of degree $n$. \\\\
+\indent \indent Let $L/F$ be such an extension. \\\\
+\indent \indent Then $L$ is generated as $F[\sqrt[n]{b}]$ for any $b$ in the class $[b]$. \\\\
 \indent \indent See \textbf{Theorem 1.25} in (Guillot, 2018, p. 14) for the full theorem. \\\\
 \indent It suffices to show that such a generating element and its equivalence class exist for $n = 4$. \\\\
 \indent Before we prove this, observe that the exponent of $F^\times/F^{\times4}$ is $4$. \\\\
-\indent \indent Indeed, every element of $[b]$ is of the form $bx^{4}$ for some $b \in F^\times{\setminus}F^{\times4}$ and $x \in F^\times$. \\\\
+\indent \indent Indeed, every element of a non-trivial $[b]$ is of the form $bx^{4}$ for some $b \in F^\times{\setminus}F^{\times4}$ and $x \in F^\times$. \\\\
 \indent \indent Let $m$ be the order of $[b]$ in $F^\times{\setminus}F^{\times4}$.  If $m > 4$, then there exists some $c = (bx^{4})^m \in F^{\times 4}$. \\\\
 \indent \indent This implies that $c = b^m(x^{m})^4 \in F^\times/F^{\times4}$, which contradicts our assumption that $b^m \in F^\times{\setminus}F^{\times4}$. \\\\
 \indent By group theory, the order of any subgroup $[b]$ in $F^\times/F^{\times4}$ must divide the exponent $4$. \\\\
