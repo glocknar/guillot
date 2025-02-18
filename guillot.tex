@@ -58,7 +58,7 @@ This means that $\alpha \in K$, and we can ask for its norm with respect to $K/F
 \indent \indent In other words,  $\sigma|_K$ is the preimage of conjugation in $K$ via $\dfrac{\textbf{Gal}(L/F)}{\textbf{Gal}(L/K)} \cong \textbf{Gal}(K/F)$. \\\\
 \indent \indent To see this more clearly, observe that $\sigma$ cyclically permutes the roots of $f(x)$ above. \\\\
 \indent \indent So $\sigma(\sqrt[4]a) = \theta \sqrt[4]{a}$. Therefore $\sigma(\sqrt[4]{a}) \, \sigma(\sqrt[4]{a}) = - \sqrt[4]{a} \, \sqrt[4]{a} = - \sqrt{a}$. \\\\
-\indent \indent By the linearity of $\sigma$, the left-hand side reduces so that $\sigma(\sqrt{a}) = - \sqrt{a}$.\\\\
+\indent \indent By the linearity of $\sigma$, the leftmost side reduces so that $\sigma(\sqrt{a}) = - \sqrt{a}$.\\\\
 Finally, the norm of $\alpha$ with respect to $K/F$ is $\alpha \, \sigma|_K(\alpha)$. \\\\
 By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\square$ \\\\
 \pagebreak
@@ -74,12 +74,12 @@ By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\squar
 \indent This implies that $i = \sqrt{-1} \in F$. Since $F$ contains a primitive $4^{th}$ root of unity: \\\\
 \indent Therefore we may apply $\emph{The Fundamental Theorem of Kummer Theory}$: \\\\ 
 \indent \indent The finite subgroup $A = \dfrac{F^\times \cap K^{\times4}}{F^{\times4}} \subset F^\times/F^{\times n}$ gives rise to a Galois extension $L/K$. \\\\
-\indent \indent $L/K$ is of degree $n$, and $L$ is generated as $F[\sqrt[n]{b}]$ by some $b$ in $[b] \in F^\times/F^{\times n}$. \\\\
+\indent \indent If $L/K$ is of degree $n$, then $L$ is generated as $F[\sqrt[n]{b}]$ for some $b$ in $[b] \in F^\times/F^{\times n}$. \\\\
 \indent \indent The order of $[b]$ in $F^\times/F^{\times n}$ is $n$. \\\\
 \indent \indent See \textbf{Theorem 1.25} in (Guillot, 2018, p. 14) for the full theorem. \\\\
-\indent It suffices to show that such an element and its equivalence class exist for $n = 4$. \\\\
+\indent It suffices to show that such an element $b$ and its equivalence class $[b]$ exist for $n = 4$. \\\\
 \indent Indeed, $a$ is such an element: it is not a square and not a fourth power in $F^\times$. \\\\
-\indent So the order of $[a]$ in $F^\times/F^{\times4}$ --- which divides the order of $\dfrac{F^\times \cap K^{\times4}}{F^{\times4}}$ is $4$ --- cannot be $2$ or $1$: \\\\
+\indent So the order of $[a]$ in $F^\times/F^{\times4}$ --- which divides the $|A| = 4$ --- cannot be $2$ or $1$: \\\\
 \indent The order of $[a]$ must be $4$. So a cyclic extension $L/K$ of degree $4$ exists. \\\\
 If $\alpha \notin F$, we take Guillot's hint and try $L = K[\sqrt{1+\alpha^2}]$. \\\\
 \indent Note that any extension of degree $2$ over a field of characteristic $p \neq 2$ is Galois. \\\\
@@ -118,7 +118,6 @@ This proves that (b) $\implies$ (a). \\\\
 Conversely, if $N_{K/F}(\alpha) = -1$, then $(x + \sqrt{a}y) \cdot (x - \sqrt{a}y) = x^2 - ay^2 = -1$. \\\\
 We can rearrange this as $a = \left(\dfrac{1}{y}\right)^2 + \left(\dfrac{x}{y}\right)^2$, which is a sum of squares in $F$. \\\\
 This proves that (a) $\implies$ (b). $\square$ \\\\
-\pagebreak
 
 \noindent {\Large \textbf{REFERENCES}} \\\\
 \noindent Guillot, Pierre. (2018). \emph{A Gentle Course in Local Class Field Theory: Local Number Fields, Brauer Groups, Galois Cohomology}. Cambridge: Cambridge University Press. \\\\
