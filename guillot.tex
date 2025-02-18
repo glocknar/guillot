@@ -73,14 +73,15 @@ By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\squar
 \indent We have $y = 0$. Since $N_{K/F}(\alpha) = -1$, we also have $x^2 = -1$. \\\\
 \indent This implies that $i = \sqrt{-1} \in F$. Since $F$ contains a primitive $4^{th}$ root of unity: \\\\
 \indent Therefore we may apply a version of $\emph{The Fundamental Theorem of Kummer Theory}$: \\\\ 
-\indent \indent Subgroups $[b]$ of order $n \geq 1$ in $F^\times/F^{\times n}$ give rise to cyclic Galois extensions of degree $n$. \\\\
+\indent \indent Non-trivial subgroups $[b]$ of order $n \geq 1$ in $F^\times/F^{\times n}$ give rise to Galois extensions of degree $n$. \\\\
 \indent \indent Let $L/F$ be such an extension. Then $L$ is generated as $F[\sqrt[n]{b}]$ for any $b$ in the class $[b]$. \\\\
 \indent \indent See \textbf{Theorem 1.25} in (Guillot, 2018, p. 14) for the full theorem. \\\\
 \indent It suffices to show that such a generating element and its equivalence class exist for $n = 4$. \\\\
 \indent Before we prove this, observe that the exponent of $F^\times/F^{\times4}$ is $4$. \\\\
-\indent \indent Indeed, every element of $[b]$ is of the form $bx^{4m}$ for some $b \in F^\times{\setminus}F^{\times4}$ and $m \geq 0$. \\\\
-\indent \indent If the order of $bx^{4m}$ in $F^\times{\setminus}F^{\times4}$ exceeds $4$, then . \\\\
-\indent By group theory, the order of any subgroup $[b]$ in $F^\times/F^{\times4}$ must divide $4$. \\\\
+\indent \indent Indeed, every element of $[b]$ is of the form $bx^{4}$ for some $b \in F^\times{\setminus}F^{\times4}$ and $x \in F^\times$. \\\\
+\indent \indent Let $m$ be the order of $[b]$ in $F^\times{\setminus}F^{\times4}$.  If $m > 4$, then there exists some $c = (bx^{4})^m \in F^{\times 4}$. \\\\
+\indent \indent This implies that $c = b^m(x^{m})^4 \in F^\times/F^{\times4}$, which contradicts our assumption that $b^m \in F^\times{\setminus}F^{\times4}$. \\\\
+\indent By group theory, the order of any subgroup $[b]$ in $F^\times/F^{\times4}$ must divide the exponent $4$. \\\\
 \indent Now it is clear that we may choose $b = a$ and $[b] = [a]$: \\\\
 \indent \indent Since $a$ is not a square or a fourth power in $F^\times$, the order of $[a]$ cannot be $2$ or $1$ (resp.). \\\\
 \indent \indent So the order of $[a]$ is $4$, and a cyclic extension $L/K$ of degree $4$ exists. \\\\
