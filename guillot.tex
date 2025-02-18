@@ -14,7 +14,7 @@
 \textbf{PART 1} \\\\
 \indent Suppose there exists an extension $L/F$ with $K \subset L$. \\\\
 \indent Suppose further that $L/F$ is Galois with $\textbf{Gal}(L/F) \cong C_4$, the cyclic group of order $4$. \\\\
-\indent Show that there exists an $\alpha \in K$ such that $N_{K/F}(\alpha) = -1.$ \\\\
+\indent Show that there exists an $\alpha \in K$ such that $N_{K/F}(\alpha) = -1$. \\\\
 \indent \emph{Hint}: try $\alpha = \dfrac{\theta - \sigma^2(\theta)}{\sigma(\theta) - \sigma^3(\theta)}$. \\\\
 \\
 \textbf{SOLUTION 1.2.1} \\\\
@@ -60,7 +60,7 @@ This means that $\alpha \in K$, and we can ask for its norm with respect to $K/F
 \indent \indent So $\sigma(\sqrt[4]a) = \theta \sqrt[4]{a}$. Therefore $\sigma(\sqrt[4]{a}) \, \sigma(\sqrt[4]{a}) = - \sqrt[4]{a} \, \sqrt[4]{a} = - \sqrt{a}$. \\\\
 \indent \indent By the linearity of $\sigma$, the left-hand side reduces so that $\sigma(\sqrt{a}) = - \sqrt{a}$.\\\\
 Finally, the norm of $\alpha$ with respect to $K/F$ is $\alpha \, \sigma|_K(\alpha)$. \\\\
-By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$, which completes the proof. $\square$ \\\\
+By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\square$ \\\\
 \pagebreak
 
 \noindent \textbf{PART 2} \\\\
@@ -82,7 +82,7 @@ If $\alpha \in F$: \\\\
 \indent It must be $4$, and a cyclic extension $L/K$ of degree $4$ exists. \\\\
 If $\alpha \notin F$, we take Guillot's hint and try $L = K[\sqrt{1+\alpha^2}]$. \\\\
 \indent Note that any extension of degree $2$ over a field of characteristic $p \neq 2$ is Galois. \\\\
-\indent Since $a \notin F^{\times2}$ and $K = F[\sqrt{a}]$, $K/F$ is Galois and $\textbf{Gal}(K/F) \cong C_2$. \\\\
+\indent Since $a \notin F^{\times2}$ and $K = F[\sqrt{a}]$, $K/F$ is Galois with $\textbf{Gal}(K/F) \cong C_2$. \\\\
 \indent Let $\sigma$ be the non-identity. Since $\sigma$ acts linearly, we have \\\\
 \indent \indent $N_{K/F}(1 + \alpha^2) = (1 + \alpha^2) \, \sigma(1 + \alpha^2) = (1 + \alpha^2) \, (1 + \sigma(\alpha)^2).$ \\\\
 \indent Recall that $N_{K/F}(\alpha) = \alpha \, \sigma(\alpha) = -1$, and so $\alpha^2 \, \sigma(\alpha)^2 = 1$. \\\\
@@ -100,13 +100,24 @@ If $\alpha \notin F$, we take Guillot's hint and try $L = K[\sqrt{1+\alpha^2}]$.
 \indent Since isomorphisms preserve group order, the preimage $g^{-1}([1 + \alpha^2])$ has order $4$. \\\\
 \indent We have again shown that $F^\times/F^{\times4}$ is non-trivial. \\\\
 \indent So, by the fundamental theorem, a cyclic extension $L/K$ of degree $4$ exists. $\square$ \\\\
-\\\\
+\\
 
 \noindent \textbf{PART 3} \\\\
+\indent Show that the following are equivalent: \\\\
+\indent \indent (a) \indent There exists an $\alpha \in K$ with $N_{K/F}(\alpha) = -1$, and \\\\
+\indent \indent (b) \indent $a$ is a sum of two squares in $F$ \\\\
 \\
 \textbf{SOLUTION 1.2.3} \\\\
-\noindent
-\pagebreak
+\noindent Again, note that any extension of degree $2$ over a field of characteristic $p \neq 2$ is Galois. \\\\
+\indent Since $a \notin F^{\times2}$ and $K = F[\sqrt{a}]$, $K/F$ is Galois with $\textbf{Gal}(K/F) \cong C_2$. \\\\
+\indent Let $\sigma$ be the non-identity, which sends $\sqrt{a}$ to $\sqrt{-a}$. \\\\
+If $a = x^2 + y^2$ for some $x, y \in F$, then $\dfrac{x^2-a}{y^2} = -1$. We also have \\\\
+\indent \indent $-1 =\dfrac{x + \sqrt{a}}{y} \cdot \dfrac{x - \sqrt{a}}{y} =\dfrac{x + \sqrt{a}}{y} \cdot \sigma(\dfrac{x + \sqrt{a}}{y})$. \\\\
+Let $\alpha = \dfrac{x + \sqrt{a}}{y} \in K$. The rightmost side of the equation above is just $N_{K/F}(\alpha)$. \\\\
+This proves that (b) $\implies$ (a). \\\\
+Conversely, if $N_{K/F}(\alpha) = -1$, then $(x + \sqrt{a}y) \cdot (x - \sqrt{a}y) = x^2 - ay^2 = -1$. \\\\
+We can rearrange this as $a = \left(\dfrac{1}{y}\right)^2 + \left(\dfrac{x}{y}\right)^2$, which is a sum of squares in $F$. \\\\
+This proves that (a) $\implies$ (b). $\square$ \\\\
 
 \noindent {\Large \textbf{REFERENCES}} \\\\
 \noindent Guillot, Pierre. (2018). \emph{A Gentle Course in Local Class Field Theory: Local Number Fields, Brauer Groups, Galois Cohomology}. Cambridge: Cambridge University Press. \\\\
