@@ -30,7 +30,7 @@ Already we can deduce that $L$ contains a primitive $4^{th}$ root of unity: \\\\
 \indent We are free to let $b = a$ and $f(x) = x^4 - a$. The latter is irreducible over $F$: \\\\ 
 \indent \indent $\bullet$ \indent $F$ is not a field of characteristic dividing the degree of $f$. \\\\
 \indent \indent $\bullet$ \indent The problem states that $a$ is not a square in $F^{\times}$. \\\\
-\indent \indent $\bullet$ \indent Since $a \notin F^{\times2}$, nor is it a fourth power in $F^{\times}$.\\\\ 
+\indent \indent $\bullet$ \indent Since $a \notin F^{\times2}$, nor is it a $4^{th}$ power in $F^{\times}$.\\\\ 
 \indent \indent All this shows that there is no linear or quadratic factor that can be split off from $f$.\\\\
 \indent \indent Such must be the case for a reducible polynomial of degree $4$. \\\\
 \indent So $\sqrt[4]{a}$ is a root of $f$ lying in $L = F[\sqrt[4]{a}]$. By \textbf{Proposition 3.28} all other roots of $f$ lie in $L$. \\\\
@@ -79,12 +79,12 @@ By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\squar
 \indent It suffices to show that such a subgroup and a generating element exist for $n = 4$. \\\\
 \indent Before we prove this, observe that the exponent of $F^\times/F^{\times4}$ is $4$. $(\ast)$ \\\\
 \indent \indent Every element of $[b]$ is of the form $bx^{4}$ for some $b \in F^\times{\setminus}F^{\times4}$ and $x \in F^\times$. \\\\
-\indent \indent Furthermore, $bx^4$ is written in lowest terms, so that $b$ does not contain a fourth power. \\\\
+\indent \indent Furthermore, $bx^4$ is written in lowest terms, so that $b$ does not contain a $4^{th}$ power. \\\\
 \indent \indent Let $m$ be the order of $[b]$ in $F^\times/F^{\times4}$.  If $m > 4$,  there exists some $c = (bx^{4})^m \in F^{\times 4}$. \\\\
 \indent \indent This implies that $b^m = b^{m-4}b^4 = 1$, contradicting that $c$ is given in lowest terms. \\\\
 \indent By group theory, the order of any subgroup $[b]$ in $F^\times/F^{\times4}$ must divide the exponent $4$. \\\\
 \indent Now it is clear that we may choose $b = a$ and $[b] = [a]$: \\\\
-\indent \indent Since $a$ is not a square or a fourth power in $F^\times$, the order of $[a]$ cannot be $2$ or $1$ (resp.). \\\\
+\indent \indent Since $a$ is not a square or a $4^{th}$ power in $F^\times$, the order of $[a]$ cannot be $2$ or $1$ (resp.). \\\\
 \indent \indent So the order of $[a]$ is $4$, and a cyclic extension $L/K$ of degree $4$ exists. \\\\
 Now suppose $\alpha \notin F$. We take Guillot's hint and try $L = K[\sqrt{1+\alpha^2}]$. \\\\
 \indent Note that any extension of degree $2$ over a field of characteristic $p \neq 2$ is Galois. \\\\
@@ -97,18 +97,20 @@ Now suppose $\alpha \notin F$. We take Guillot's hint and try $L = K[\sqrt{1+\al
 \indent But $N_{K/F}(\beta) \in F$, which implies that $N_{K/F}(1 + \alpha^2)$ also lies in $F^{\times2}$. \\\\
 \indent This cannot be the case since $(\alpha - \sigma(\alpha))^2 = 4y^2a$  does not lie in $F^{\times2}$. \\\\
 \indent \indent While $4y^2$ is a square, recall that we have assumed $a \notin F^{\times2}$. \\\\
-\indent Therefore, $1 + \alpha^2$ is not a fourth power in $K^{\times}$. Nor is it a square. \\\\
+\indent Therefore, $1 + \alpha^2$ is not a $4^{th}$ power in $K^{\times}$. Nor is it a square. \\\\
 \indent Using the same argument at $(\ast)$ above: \\\\
 \indent \indent The exponent of $K^\times/K^{\times4}$ is $4$. Let $[b]$ be a subgroup. \\\\
 \indent \indent The order of $[b]$ in $K^\times/K^{\times4}$ divides the exponent $4$. \\\\
 \indent Since the order of $[1 + \alpha^2]$ in $K^\times/K^{\times4}$ is not $1$ or $2$, it must be $4$. \\\\
-\indent Consider the element $1 + x^2$ in $K^\times$ where $x$ is the component of $\alpha$ lying in $F^\times$, i.e. $\alpha = x + \sqrt{a} y$. \\\\
-\indent This is also not a square or fourth power in $K^\times$. \\\\
+\indent Consider the element $1 + x^2 \in K^\times$ where $x$ is the component of $\alpha$ lying in $F^\times$ (i.e., $\alpha = x + \sqrt{a} y$). \\\\
+\indent This is also not a square or $4^{th}$ power in $K^\times$. \\\\
+\indent \indent To see this, observe that the component of $w^2 = (u + \sqrt{a} v)^2$ lying in $F$ is $(u^2 + ay^2)$. \\\\
+\indent \indent But if $w$ lies in $F$, $(u^2 + ay^2) = u^2$ with $y = 0$. \\\\
 \indent So the subgroup $[1 + x^2]$ has order $4$ in $K^\times/K^{\times4}$. The upshot is that $1 + x^2$ lies in $F^\times$: \\\\
-\indent We may now consider the preimage of $[1 + x^2]$ via the group homomorphism $g: F^\times/F^{\times4} \rightarrow K^\times/K^{\times4}$. \\\\ 
-\indent By group theory, the order of $g^{-1}([1 + x^2])$ in $F^\times/F^{\times4}$ is a multiple of the order of $[1 + x^2]$ in $K^\times/K^{\times4}$. \\\\
-\indent Since the exponent of $F^\times/F^{\times4}$ is $4$, the only multiple that suffices is $4$ itself. \\\\
-\indent So the fourth root of some element in $g^{-1}([1 + x^2])$ generates cyclic extension $L/F$ of degree $4$. $\square$ \\\\
+\indent We may now consider the preimage of $[1 + x^2]$ via the \emph{injective} homomorphism $g: F^\times/F^{\times4} \rightarrow K^\times/K^{\times4}$. \\\\ 
+\indent By group theory, the order of $g^{-1}([1 + x^2])$ in $F^\times/F^{\times4}$ is equal to the order of $[1 + x^2]$ in $K^\times/K^{\times4}$. \\\\
+\indent So we have constructed a subgroup of order $4$ in $F^\times/F^{\times4}$, namely $g^{-1}([1 + x^2]) = [1 + x^2]$. \\\\
+\indent By the fundamental theorem, any $4^{th}$ root of an element in $[1 + x^2]$ generates $L/F$. $\square$ \\\\
 \\
 
 \noindent \textbf{PART 3} \\\\
