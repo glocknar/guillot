@@ -77,7 +77,7 @@ By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\squar
 \indent \indent Then $L$ is generated as $F[\sqrt[n]{b}]$ for any $b$ in $[b]$. \\\\
 \indent \indent See \textbf{Theorem 1.25} in (Guillot, 2018, p. 14) for the full theorem. \\\\
 \indent It suffices to show that such a subgroup and a generating element exist for $n = 4$. \\\\
-\indent Before we prove this, observe that the exponent of $F^\times/F^{\times4}$ is $4$. \\\\
+\indent Before we prove this, observe that the exponent of $F^\times/F^{\times4}$ is $4$. $(\ast)$ \\\\
 \indent \indent Every element of $[b]$ is of the form $bx^{4}$ for some $b \in F^\times{\setminus}F^{\times4}$ and $x \in F^\times$. \\\\
 \indent \indent Furthermore, $bx^4$ is written in lowest terms, so that $b$ does not contain a fourth power. \\\\
 \indent \indent Let $m$ be the order of $[b]$ in $F^\times/F^{\times4}$.  If $m > 4$,  there exists some $c = (bx^{4})^m \in F^{\times 4}$. \\\\
@@ -93,17 +93,18 @@ Now suppose $\alpha \notin F$. We take Guillot's hint and try $L = K[\sqrt{1+\al
 \indent \indent $N_{K/F}(1 + \alpha^2) = (1 + \alpha^2) \, \sigma(1 + \alpha^2) = (1 + \alpha^2) \, (1 + \sigma(\alpha)^2).$ \\\\
 \indent Recall that $N_{K/F}(\alpha) = \alpha \, \sigma(\alpha) = -1$, and so $\alpha^2 \, \sigma(\alpha)^2 = 1$. \\\\
 \indent Applying these formulae, we get $N_{K/F}(1 + \alpha^2) = (\alpha - \sigma(\alpha))^2$. \\\\
-\indent Now, if $1 + \alpha^2$ itself lies in $K^{\times2}$, then $N_{K/F}(1 + \alpha^2) = N_{K/F}(\beta)^2$ for some $\beta \in K$. \\\\
-\indent But $N_{K/F}(\beta) \in F$, which implies that $N_{K/F}(1 + \alpha^2)$ lies in $F^{\times2}$. \\\\
+\indent If $1 + \alpha^2$ itself lies in $K^{\times2}$, then $N_{K/F}(1 + \alpha^2) = N_{K/F}(\beta)^2$ for some $\beta \in K$. \\\\
+\indent But $N_{K/F}(\beta) \in F$, which implies that $N_{K/F}(1 + \alpha^2)$ also lies in $F^{\times2}$. \\\\
 \indent This cannot be the case since $(\alpha - \sigma(\alpha))^2 = 4y^2a$  does not lie in $F^{\times2}$. \\\\
 \indent \indent While $4y^2$ is a square, recall that we have assumed $a \notin F^{\times2}$. \\\\
-\indent Therefore, $1 + \alpha^2$ is not a fourth power in $K^{\times}$, nor is it a square. \\\\
-\indent So the order of $[1 + \alpha^2]$ in $\dfrac{K^\times \cap L^{\times4}}{K^{\times4}} = 4$ cannot be $1$ or $2$: It must be $4$. \\\\
-\indent Consider the group homomorphism $g: \dfrac{F^\times \cap K^{\times4}}{F^{\times4}} \rightarrow \dfrac{K^\times \cap L^{\times4}}{K^{\times4}}$. \\\\ 
-\indent \indent Since every finite subgroup of a field is cyclic, $g$ is an isomorophism. \\\\  
-\indent \indent Indeed, by the uniqueness of $C_4$, we have $\dfrac{F^\times \cap K^{\times4}}{F^{\times4}} \cong C_4 \cong \dfrac{K^\times \cap L^{\times4}}{K^{\times4}}$. \\\\ 
-\indent \indent This is an application of \textbf{Lemma 1.1} in (Guillot, 2018, p. 3). \\\\
-\indent Since isomorphisms preserve group order, the preimage $g^{-1}([1 + \alpha^2])$ has order $4$. \\\\
+\indent Therefore, $1 + \alpha^2$ is not a fourth power in $K^{\times}$. Nor is it a square. \\\\
+\indent Using the same argument at $(\ast)$ above: \\\\
+\indent \indent The exponent of $K^\times/K^{\times4}$ is $4$. Let $[b]$ be a subgroup. \\\\
+\indent \indent The order of $[b]$ in $K^\times/K^{\times4}$ divides the exponent $4$. \\\\
+\indent Since the order of $[1 + \alpha^2]$ in $K^\times/K^{\times4}$ is not $1$ or $2$, it must be $4$. \\\\
+\indent Consider the group homomorphism $g: F^\times/F^{\times4} \rightarrow K^\times/K^{\times4}$ and the preimage of $[1 + \alpha^2]$. \\\\ 
+\indent By group theory, the order of $g^{-1}([1 + \alpha^2])$ in $F^\times/F^{\times4}$ is a multiple of the order of $[1 + \alpha^2]$ in $K^\times/K^{\times4}$. \\\\
+\indent Since the exponent of $F^\times/F^{\times4}$ is $4$, the only multiple that suffices is $4$ itself. \\\\
 \indent So the fourth root of some element of $g^{-1}([1 + \alpha^2])$ generates cyclic extension $L/F$ of degree $4$. $\square$ \\\\
 \\
 
