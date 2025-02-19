@@ -47,17 +47,16 @@ On the other hand, $N_{L/K}(\alpha)$ involves only those powers of $\sigma$ that
 \indent Since $[L:F] = [L:K][K:F] = 4$, $[L:K]$ must be $2$. \\\\
 \indent So $\textbf{Gal}(L/K)$ is a subgroup of degree $2$ in $G = \textbf{Gal}(L/F).$ \\\\
 \indent The only such subgroup is given by $\{1_G, \sigma^2\}$. \\\\
-So $N_{L/K}(\alpha) = \alpha \, \sigma^2(\alpha)$, and this is just $\alpha^2$ by $(\ast)$ above. \\\\
+So $N_{L/K}(\alpha) = \alpha \, \sigma^2(\alpha)$, and this is equal to $\alpha^2$ by $(\ast)$ above. \\\\
 Since the image of $N_{L/K}$ is $K$, we now know that $\alpha^2 \in K$. \\\\
-This implies that $\alpha \in K$. We can ask for $N_{K/F}(\alpha)$ once we know $\textbf{Gal}(K/F)$. \\\\
+This implies that $\alpha \in K$. Now, we ask for $N_{K/F}(\alpha)$ once we know $\textbf{Gal}(K/F)$. \\\\
 \indent The problem states that $K$ is generated as $F[\sqrt{a}]$ for some $a \notin F^{\times2}$ \\\\
 \indent So every element of $K$ is of the form $x + \sqrt{a}y$ for some $x, y \in F$ and $[K:F] = 2$. \\\\
 \indent Any extension $K/F$ of degree $2$ over a field of characteristic $p \neq 2$ is Galois. \\\\ 
-\indent $\textbf{Gal}(K/F) \cong C_2$, and the non-identity element sends $\sqrt{a}$ to $-\sqrt{a}$. \\\\
-The non-identity in $\textbf{Gal}(K/F)$ is just the restriction to $K$ of $\sigma \in \textbf{Gal}(L/F)$, denoted by $\sigma|_K$. \\\\
-\indent In other words,  the preimage of conjugation in $K$ via $\dfrac{\textbf{Gal}(L/F)}{\textbf{Gal}(L/K)} \cong \textbf{Gal}(K/F)$ is $\sigma|_K$. \\\\
-\indent To see this more clearly: \\\\
-\indent \indent Observe that $\sigma$ cyclically permutes the roots of $f(x)$ above. \\\\
+\indent Also, $\textbf{Gal}(K/F) \cong C_2$, and the non-identity  --- conjugation --- element sends $\sqrt{a}$ to $-\sqrt{a}$. \\\\
+Notice that conjugation is the same as the restriction of $\sigma$ to $K$, denoted by $\sigma|_K$. \\\\
+\indent In other words, $\sigma$ is the preimage of conjugation in $K$ via $\dfrac{\textbf{Gal}(L/F)}{\textbf{Gal}(L/K)} \cong \textbf{Gal}(K/F)$. \\\\
+\indent To see this more clearly, observe that $\sigma$ cyclically permutes the roots of $f(x)$ above. \\\\
 \indent \indent We have $\sigma(\sqrt[4]a) = \theta \sqrt[4]{a}$. Therefore $\sigma(\sqrt[4]{a}) \, \sigma(\sqrt[4]{a}) = - \sqrt[4]{a} \, \sqrt[4]{a} = - \sqrt{a}$. \\\\
 \indent \indent By the linearity of $\sigma$, the leftmost side reduces so that $\sigma(\sqrt{a}) = - \sqrt{a}$.\\\\
 Finally, the norm of $\alpha$ with respect to $K/F$ is $\alpha \, \sigma|_K(\alpha)$. \\\\
@@ -74,14 +73,15 @@ By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\squar
 \indent This implies that $i = \sqrt{-1} \in F$. So $F$ contains a primitive $4^{th}$ root of unity: \\\\
 \indent Therefore we may apply a (limited) version of $\emph{The Fundamental Theorem of Kummer Theory}$: \\\\ 
 \indent \indent Subgroups of order $n \geq 1$ in $F^\times/F^{\times n}$ give rise to Galois extensions of degree $n$. \\\\
-\indent \indent Let $L/F$ be such an extension. \\\\
-\indent \indent Then $L$ is generated as $F[\sqrt[n]{b}]$ for any $b$ in the class $[b]$. \\\\
+\indent \indent Let $[b]$ be such a subgroup. Let $L/F$ be such an extension. \\\\
+\indent \indent Then $L$ is generated as $F[\sqrt[n]{b}]$ for any $b$ in $[b]$. \\\\
 \indent \indent See \textbf{Theorem 1.25} in (Guillot, 2018, p. 14) for the full theorem. \\\\
-\indent It suffices to show that such a generating element and its equivalence class exist for $n = 4$. \\\\
+\indent It suffices to show that such a subgroup and a generating element exist for $n = 4$. \\\\
 \indent Before we prove this, observe that the exponent of $F^\times/F^{\times4}$ is $4$. \\\\
-\indent \indent Indeed, every element of a non-trivial $[b]$ is of the form $bx^{4}$ for some $b \in F^\times{\setminus}F^{\times4}$ and $x \in F^\times$. \\\\
-\indent \indent Let $m$ be the order of $[b]$ in $F^\times{\setminus}F^{\times4}$.  If $m > 4$, then there exists some $c = (bx^{4})^m \in F^{\times 4}$. \\\\
-\indent \indent This implies that $c = b^m(x^{m})^4 \in F^\times/F^{\times4}$, which contradicts our assumption that $b^m \in F^\times{\setminus}F^{\times4}$. \\\\
+\indent \indent Every element of $[b]$ is of the form $bx^{4}$ for some $b \in F^\times{\setminus}F^{\times4}$ and $x \in F^\times$. \\\\
+\indent \indent Furthermore, $bx^4$ is written in lowest terms, so that $b$ does not contain a fourth power. \\\\
+\indent \indent Let $m$ be the order of $[b]$ in $F^\times/F^{\times4}$.  If $m > 4$,  there exists some $c = (bx^{4})^m \in F^{\times 4}$. \\\\
+\indent \indent This implies that $b^m = b^{m-4}b^4 = 1$, contradicting that $c$ is given in lowest terms. \\\\
 \indent By group theory, the order of any subgroup $[b]$ in $F^\times/F^{\times4}$ must divide the exponent $4$. \\\\
 \indent Now it is clear that we may choose $b = a$ and $[b] = [a]$: \\\\
 \indent \indent Since $a$ is not a square or a fourth power in $F^\times$, the order of $[a]$ cannot be $2$ or $1$ (resp.). \\\\
@@ -89,7 +89,7 @@ By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\squar
 Now suppose $\alpha \notin F$. We take Guillot's hint and try $L = K[\sqrt{1+\alpha^2}]$. \\\\
 \indent Note that any extension of degree $2$ over a field of characteristic $p \neq 2$ is Galois. \\\\
 \indent Since $a \notin F^{\times2}$ and $K = F[\sqrt{a}]$, $K/F$ is Galois with $\textbf{Gal}(K/F) \cong C_2$. \\\\
-\indent Let $\sigma$ be the non-identity. Since $\sigma$ acts linearly, we have \\\\
+\indent Let $\sigma$ be the non-identity. Since $\sigma$ acts linearly, we have: \\\\
 \indent \indent $N_{K/F}(1 + \alpha^2) = (1 + \alpha^2) \, \sigma(1 + \alpha^2) = (1 + \alpha^2) \, (1 + \sigma(\alpha)^2).$ \\\\
 \indent Recall that $N_{K/F}(\alpha) = \alpha \, \sigma(\alpha) = -1$, and so $\alpha^2 \, \sigma(\alpha)^2 = 1$. \\\\
 \indent Applying these formulae, we get $N_{K/F}(1 + \alpha^2) = (\alpha - \sigma(\alpha))^2$. \\\\
@@ -118,7 +118,7 @@ Now suppose $\alpha \notin F$. We take Guillot's hint and try $L = K[\sqrt{1+\al
 \indent Let $\sigma$ be the non-identity, which sends $\sqrt{a}$ to $\sqrt{-a}$. \\\\
 If $a = x^2 + y^2$ for some $x, y \in F$, then $\dfrac{x^2-a}{y^2} = -1$. We also have \\\\
 \indent \indent $-1 =\dfrac{x + \sqrt{a}}{y} \cdot \dfrac{x - \sqrt{a}}{y} =\dfrac{x + \sqrt{a}}{y} \cdot \sigma(\dfrac{x + \sqrt{a}}{y})$. \\\\
-Let $\alpha = \dfrac{x + \sqrt{a}}{y} \in K$. The rightmost side of the equation above is just $N_{K/F}(\alpha)$. \\\\
+Suppose $\alpha = \dfrac{x + \sqrt{a}}{y} \in K$. Then the rightmost side of the equation above is just $N_{K/F}(\alpha)$. \\\\
 This proves that (b) $\implies$ (a). \\\\
 Conversely, if $N_{K/F}(\alpha) = -1$, then $(x + \sqrt{a}y) \cdot (x - \sqrt{a}y) = x^2 - ay^2 = -1$. \\\\
 We can rearrange this as $a = \left(\dfrac{1}{y}\right)^2 + \left(\dfrac{x}{y}\right)^2$, which is a sum of squares in $F$. \\\\
