@@ -102,10 +102,13 @@ Now suppose $\alpha \notin F$. We take Guillot's hint and try $L = K[\sqrt{1+\al
 \indent \indent The exponent of $K^\times/K^{\times4}$ is $4$. Let $[b]$ be a subgroup. \\\\
 \indent \indent The order of $[b]$ in $K^\times/K^{\times4}$ divides the exponent $4$. \\\\
 \indent Since the order of $[1 + \alpha^2]$ in $K^\times/K^{\times4}$ is not $1$ or $2$, it must be $4$. \\\\
-\indent Consider the group homomorphism $g: F^\times/F^{\times4} \rightarrow K^\times/K^{\times4}$ and the preimage of $[1 + \alpha^2]$. \\\\ 
-\indent By group theory, the order of $g^{-1}([1 + \alpha^2])$ in $F^\times/F^{\times4}$ is a multiple of the order of $[1 + \alpha^2]$ in $K^\times/K^{\times4}$. \\\\
+\indent Consider the element $1 + x^2$ in $K^\times$ where $x$ is the component of $\alpha$ lying in $F^\times$, i.e. $\alpha = x + \sqrt{a} y$. \\\\
+\indent This is also not a square or fourth power in $K^\times$. \\\\
+\indent So the subgroup $[1 + x^2]$ has order $4$ in $K^\times/K^{\times4}$. The upshot is that $1 + x^2$ lies in $F^\times$: \\\\
+\indent We may now consider the preimage of $[1 + x^2]$ via the group homomorphism $g: F^\times/F^{\times4} \rightarrow K^\times/K^{\times4}$. \\\\ 
+\indent By group theory, the order of $g^{-1}([1 + x^2])$ in $F^\times/F^{\times4}$ is a multiple of the order of $[1 + x^2]$ in $K^\times/K^{\times4}$. \\\\
 \indent Since the exponent of $F^\times/F^{\times4}$ is $4$, the only multiple that suffices is $4$ itself. \\\\
-\indent So the fourth root of some element of $g^{-1}([1 + \alpha^2])$ generates cyclic extension $L/F$ of degree $4$. $\square$ \\\\
+\indent So the fourth root of some element in $g^{-1}([1 + x^2])$ generates cyclic extension $L/F$ of degree $4$. $\square$ \\\\
 \\
 
 \noindent \textbf{PART 3} \\\\
