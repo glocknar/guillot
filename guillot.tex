@@ -7,7 +7,7 @@
 
 \begin{document}
 
-\noindent {\Large \textbf{PROBLEM 1.2}} \indent (Guillot, 2018, p. 21) \\\\
+\noindent {\large \textbf{PROBLEM 1.2}} \indent (Guillot, 2018, p. 21) \\\\
 \indent Let $F$ be a field of characteristic $p \neq 2$. \\\\
 \indent Let $a \in F^\times{\setminus}F^{\times2}$, and $K = F[\sqrt{a}]$. \\\\
 \\
@@ -18,28 +18,29 @@
 \indent \emph{Hint}: try $\alpha = \dfrac{\theta - \sigma^2(\theta)}{\sigma(\theta) - \sigma^3(\theta)}$. \\\\
 \\
 \textbf{SOLUTION 1.2.1} \\\\
-We investigate this field extension, as we often do, by: \\\\
-\indent $\bullet$ \indent analyzing the (mercifully linear) action of $\textbf{Gal}(L/F)$ on $L$, and \\\\
-\indent $\bullet$ \indent using norms to construct field elements (or, to prove they don't exist). \\\\\\
 Taking Guillot's hint: let $\alpha$ be of the form $\dfrac{\theta - \sigma^2(\theta)}{\sigma(\theta) - \sigma^3(\theta)}$. \\\\\\
-We take $\theta$ to be an element of $L\setminus K$. Such an element must exist by dimension. \\\\
-We take $\sigma$ to be a generator of $\textbf{Gal}(L/F) \cong C_4$. Since $\sigma$ fixes $L$, $\alpha$ lies in $L$. \\\\
-Since $\sigma$ acts linearly on $L$, we have: \\\\\\
-\indent $\sigma(\alpha) = \dfrac{\sigma(\theta) - \sigma^3(\theta)}{\sigma^2(\theta) - \theta} = -1/\alpha$. $(\ast)$ \\\\\\
-The norm of $\alpha$ with respect to $L/F$ is given by $N_{L/F}(\alpha) = \alpha \, \sigma(\alpha) \, \sigma^2(\alpha)\, \sigma^3(\alpha)$. \\\\
-But $N_{L/K}(\alpha)$ involves only those powers of $\sigma$ that lie in $\textbf{Gal}(L/K)$. \\\\
-\indent Clearly, $K/F$ is Galois of degree $2$ with $\textbf{Gal}(K/F) \cong C_2$. \\\\
-\indent Since $[L:F] = [L:K][K:F] = 4$, $[L:K]$ must be $2$. \\\\
-\indent So $\textbf{Gal}(L/K)$ is a subgroup of degree $2$ in $G = \textbf{Gal}(L/F).$ \\\\
-\indent The only such subgroup is given by $\{1_G, \sigma^2\}$. \\\\
-So $N_{L/K}(\alpha) = \alpha \, \sigma^2(\alpha)$, and this is equal to $\alpha^2$ by $(\ast)$ above. \\\\
+We take $\theta$ to be an element of $L\setminus K$. Such a $\theta$ must exist by dimension. \\\\
+We take $\sigma$ to be a generator of $\textbf{Gal}(L/F) \cong C_4$. Let $1_G$ be the identity. \\\\
+Since $\sigma$ fixes $L$, $\alpha$ lies in $L$. Since $\sigma$ acts linearly, we have: \\\\\\
+\indent $\sigma(\alpha) = \dfrac{\sigma(\theta) - \sigma^3(\theta)}{\sigma^2(\theta) - \theta} = -1/\alpha$. \indent $(1)$ \\\\\\
+We seek $N_{L/K}(\alpha)$, which involves only those  $\sigma^n$ that lie in $\textbf{Gal}(L/K)$ \\\\
+To find $\textbf{Gal}(L/K)$ we apply \emph{The Fundamental Theorem of Galois Theory} : \\\\
+\indent There exists normal series $\{1_G\} \, \triangleleft \, \textbf{Gal}(L/K) \, \triangleleft \, \textbf{Gal}(L/F)$. \\\\
+\indent So $\textbf{Gal}(L/K)$ is a normal subgroup in $\textbf{Gal}(L/F)$. \\\\
+\indent The only such subgroup in $C_4$ is given by $\{1_G, \, \sigma^2\}$. \\\\
+\indent See \textbf{Theorem 5.1} in (Morandi, 1996, p. 51) for details. \\\\
+So $N_{L/K}(\alpha) = \alpha \,\, \sigma^2(\alpha)$, and this is equal to $\alpha^2$ by $(1)$ above. \\\\
 Since the image of $N_{L/K}$ is $K$, we now know that $\alpha^2 \in K$. \\\\
-This implies that $\alpha \in K$ and we may now ask for $N_{K/F}(\alpha)$. \\\\
-The non-identity element in $\textbf{Gal}(K/F)$ -- conjugation -- sends $\sqrt{a}$ to $-\sqrt{a}$. \\\\
+This implies that $\alpha \in K$, and we may now ask for $N_{K/F}(\alpha)$. \\\\
+We have $\textbf{Gal}(K/F) \cong C_2$ where the non-identity element conjugates $\sqrt{a}$. \\\\
 This automorphism is the same as the restriction of $\sigma$ to $K$, denoted by $\sigma|_K$. \\\\
-Indeed, $\sigma$ is in the preimage of conjugation via $\dfrac{\textbf{Gal}(L/F)}{\textbf{Gal}(L/K)} \cong \textbf{Gal}(K/F)$. \\\\
-Therefore, the norm of $\alpha$ with respect to $K/F$ is $\alpha \, \sigma|_K(\alpha)$. \\\\
-By $(\ast)$ above, $\alpha \, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\square$ \\\\\\
+\indent Such a compatible restriction exists by \emph{The Isomorphism Extension Theorem}. \\\\
+\indent See \textbf{Theorem 3.20} in (Morandi, 1996, p. 34) for details. \\\\
+\indent To see that it can be given by $\sigma|_K$, observe that $\dfrac{\textbf{Gal}(L/F)}{\textbf{Gal}(L/K)} \cong \textbf{Gal}(K/F)$. \\\\
+\indent Via this homomorphism, the preimage of conjugation in $K$ is the class of $\sigma$. \\\\
+\indent  See \textbf{Theorem 4} in (Pinter, 1990, p. 330). \\\\\\
+Therefore, the norm of $\alpha$ with respect to $K/F$ is $\alpha \,\, \sigma|_K(\alpha)$. \\\\
+By $(\ast)$ above, $\alpha \,\, \sigma|_K(\alpha) = N_{K/F}(\alpha) = -1$. $\square$ \\\\\\
 
 \noindent \textbf{PART 2} \\\\
 \indent Let $\alpha \in K$ be an element with norm $N_{K/F}(\alpha) = -1$. \\\\
@@ -55,24 +56,24 @@ Therefore we may apply $\emph{The Fundamental Theorem of Kummer Theory}$: \\\\
 \indent Subgroups of order $n \geq 1$ in $F^\times/F^{\times n}$ give rise to Galois extensions of degree $n$. \\\\
 \indent Let $[b]$ be such a subgroup. Let $L/F$ be such an extension. \\\\
 \indent Then $L$ is generated as $F[\sqrt[n]{b}]$ for any $b$ in $[b]$. \\\\
-\indent See \textbf{Theorem 1.25} in (Guillot, 2018, p. 14) for the full theorem. \\\\
-It suffices to show that such a subgroup and a generating element exist for $n = 4$. \\\\
-Before we do so, observe that the exponent of $F^\times/F^{\times4}$ is $4$. $(\ast)$ \\\\
-\indent Every element of $[b]$ is of the form $bx^{4}$ for some $b \in F^\times{\setminus}F^{\times4}$ and $x \in F^\times$. \\\\
-\indent Furthermore, $bx^4$ is written in ``lowest terms", so that $b$ does not contain a $4^{th}$ power. \\\\
-\indent Let $m$ be the order of $[b]$ in $F^\times/F^{\times4}$.  If $m > 4$,  there exists some $c = (bx^{4})^m \in F^{\times 4}$. \\\\
+\indent See \textbf{Theorem 1.25} in (Guillot, 2018, p. 14) for details. \\\\
+It suffices to show that such a subgroup and generating element exist for $n = 4$. \\\\
+Before we do so, observe that the exponent of $F^\times/F^{\times4}$ is $4$. \indent $(2)$ \\\\
+\indent Every element of $[b]$ is of the form $bf^{4}$ for some $b \in F^\times{\setminus}F^{\times4}$ and $f \in F^\times$. \\\\
+\indent Furthermore, $bf^4$ is in lowest terms, so that $b$ does not contain a $4^{th}$ power. \\\\
+\indent Let $m$ be the order of $[b]$ in $F^\times/F^{\times4}$.  If $m > 4$,  there exists some $c = (bf^{4})^m \in F^{\times 4}$. \\\\
 \indent This implies that $b^m = b^{m-4}b^4 = 1$, contradicting that $c$ is given in lowest terms. \\\\
 By group theory, the order of any subgroup $[b]$ in $F^\times/F^{\times4}$ must divide the exponent $4$. \\\\
 Now it is clear that we may choose $b = a$ and $[b] = [a]$: \\\\
-Since $a$ is not a square or a $4^{th}$ power in $F^\times$, the order of $[a]$ cannot be $2$ or $1$. $(\ast\ast)$ \\\\
+Since $a$ is not a square or a $4^{th}$ power in $F^\times$, the order of $[a]$ cannot be $2$ or $1$. $(3)$ \\\\
 So the order of $[a]$ is $4$, and a cyclic extension $L/K$ of degree $4$ exists. \\\\
 \\
 Now suppose $\alpha \notin F$. We take Guillot's hint and try $L = K[\sqrt{1+\alpha^2}]$. \\\\
 Clearly, $K/F$ is Galois of degree $2$ with $\textbf{Gal}(K/F) \cong C_2$. \\\\
 Let $\sigma$ be the non-identity (conjugation) and $\overline{\alpha} = \sigma(\alpha)$. \\\\
-We have: $N_{K/F}(\beta) = (1 + \alpha^2) \, (1 + \sigma(\alpha)^2) = (1 + \alpha^2) \, (1 + \overline{\alpha}^2).$ \\\\
+We have: $N_{K/F}(1 + \alpha^2) = (1 + \alpha^2) \, (1 + \sigma(\alpha)^2) = (1 + \alpha^2) \, (1 + \overline{\alpha}^2).$ \\\\
 Recall that $N_{K/F}(\alpha) = \alpha \, \sigma(\alpha) = -1$, and so $\alpha^2 \, \sigma(\alpha)^2 = 1$. \\\\
-Applying these formulae, we get $N_{K/F}(\beta) = (\alpha - \overline{\alpha})^2$. \\\\
+Applying these ``formulae", we get $N_{K/F}(1 + \alpha^2) = (\alpha - \overline{\alpha})^2$. \\\\
 If $1 + \alpha^2$ lies in $K^{\times2}$, then $N_{K/F}(1 + \alpha^2) = N_{K/F}(\beta)^2$ for some $\beta \in K$. \\\\
 But $N_{K/F}(\beta) \in F$, which implies that $N_{K/F}(1 + \alpha^2)$ also lies in $F^{\times2}$. \\\\
 This cannot be the case since $(\alpha - \sigma(\alpha))^2 = 4y^2a$  does not lie in $F^{\times2}$. \\\\
@@ -84,27 +85,27 @@ We may now apply the so-called \emph{Equivariant Kummer Theory}: \\\\
 \indent Consider subgroups of order $n \geq 1$ in $K^\times/K^{\times n}$ fixed by the action of $\textbf{Gal}(K/F)$. \\\\
 \indent These give rise to Galois extensions $L/K$ of degree $n$ such that $L/F$ is also Galois. \\\\
 \indent Let $[b]$ be such a subgroup of $K^\times/K^{\times n}$. Then $L$ is generated as $K[\sqrt[n]{b}]$ for any $b$ in $[b]$.  \\\\
-\indent See \textbf{Theorem 1.26} in (Guillot, 2018, p. 14) for the full theorem. \\\\
-Certainly, $K$ contains the primitive \emph{square} root of unity, namely -1. \\\\
-Using $(\ast)$ and $(\ast\ast)$ above, the order of $[\beta]$ in $K^\times/K^{\times2}$ is $2$. \\\\
-It remains to show that $[\beta]$ is preserved by the action of $\textbf{Gal}(K/F)$ : \\\\\\
+\indent See \textbf{Theorem 1.26} in (Guillot, 2018, p. 14) for details. \\\\
+Certainly, $K$ contains the primitive \emph{square} root of unity, namely $-1$. \\\\
+Using $(2)$ and $(3)$ above, the order of $[1 + \alpha^2]$ in $K^\times/K^{\times2}$ is $2$. \\\\
+It remains to show that $[1 + \alpha^2]$ is preserved by the action of $\textbf{Gal}(K/F)$ : \\\\\\
 \indent $\sigma(1 + \alpha^2) = 1 + \overline{\alpha}^2 = \dfrac{N_{K/F}(1 + \alpha^2)}{1 + \alpha^2} = \dfrac{4y^2\alpha}{1 + \alpha^2} = (1 + \alpha^2) \cdot \left(\dfrac{2y\sqrt{\alpha}}{1 + \alpha^2}\right)^2$. \\\\\\
-Thus, $\sigma(1 + \alpha^2) = (1 + \alpha^2) \cdot k^2$ for $k = \left(\dfrac{2y\sqrt{\alpha}}{1 + \alpha^2}\right)^2 \in K^\times$, and $\sigma$ fixes $\alpha$. $\square$ \\\\
+Thus, $\sigma(1 + \alpha^2) = (1 + \alpha^2) \cdot k^2$ for $k = \left(\dfrac{2y\sqrt{\alpha}}{1 + \alpha^2}\right)^2 \in K^\times$, and $\sigma$ fixes $[1 + \alpha^2]$. $\square$ \\\\
 \\
 
 \noindent \textbf{PART 3} \\\\
 \indent Show that the following are equivalent: \\\\
 \indent \indent (a) \indent There exists an $\alpha \in K$ with $N_{K/F}(\alpha) = -1$, and \\\\
-\indent \indent (b) \indent $a$ is a sum of two squares in $F$ \\\\
+\indent \indent (b) \indent $a$ is a sum of two squares in $F$. \\\\
 \\
 \textbf{SOLUTION 1.2.3} \\\\
 \noindent Recall that $F$ is a field of characteristic $p \neq 2$ and $K = F[\sqrt{a}]$. \\\\
 Clearly, $K/F$ is Galois of degree $2$ with $\textbf{Gal}(K/F) \cong C_2$. \\\\
-Let $\sigma$ be the non-identity (conjugation) which sends $\sqrt{a}$ to $\sqrt{-a}$. \\\\
+Let $\sigma$ be the non-identity (conjugation) which sends $\sqrt{a}$ to $-\sqrt{a}$. \\\\
 If $a = x^2 + y^2$ for some $y \neq 0$ and $x$ in $F$, then $\dfrac{x^2-a}{y^2} = -1$. Also, \\\\\\
 \indent $\dfrac{x + \sqrt{a}}{y} \cdot \dfrac{x - \sqrt{a}}{y} =\dfrac{x + \sqrt{a}}{y} \cdot \sigma(\dfrac{x + \sqrt{a}}{y}) = -1$. \\\\\\
-Suppose $\alpha = \dfrac{x + \sqrt{a}}{y} \in K$. The equation above reduces to $N_{K/F}(\alpha) = -1$. \\\\
-On the other hand, if $y = 0$, then $a = x^2$. This cannot be the case because $a \notin F^{\times2}$. \\\\\\
+Letting $\alpha = \dfrac{x + \sqrt{a}}{y} \in K$, the equation above reduces to $N_{K/F}(\alpha) = -1$. \\\\
+On the other hand, if $y = 0$, then $a = x^2$. This cannot be the case because $a \notin F^{\times2}$. \\\\
 Therefore (b) $\implies$ (a). \\\\\\
 Every element of $K$ is of the form $x + \sqrt{a} y$ for some $x, y \in F$. \\\\
 If $N_{K/F}(\alpha) = -1$, then $(x + \sqrt{a}y) \cdot (x - \sqrt{a}y) = x^2 - ay^2 = -1$. \\\\
@@ -114,7 +115,8 @@ Therefore (a) $\implies$ (b). $\square$
 \pagebreak
 
 \noindent {\Large \textbf{REFERENCES}} \\\\\\
-\noindent Guillot, Pierre. (2018). \emph{A Gentle Course in Local Class Field Theory: Local Number Fields, Brauer Groups, Galois Cohomology}. Cambridge: Cambridge University Press. \\\\
-\noindent Morandi, Patrick. (1996). \emph{Field and Galois Theory}. Graduate Texts in Mathematics, vol 167. Springer, New York, NY. \\\\
+Guillot, P. (2018). \emph{A Gentle Course in Local Class Field Theory: Local Number Fields, Brauer Groups, Galois Cohomology}. Cambridge: Cambridge University Press. \\\\
+Morandi, P. (1996). \emph{Field and Galois Theory}. Graduate Texts in Mathematics, vol 167. Springer, New York, NY. \\\\
+Pinter, C.C. (1990) \emph{A Book of Abstract Algebra}. 2nd Edition, Dover Publications, Inc., Mineola, New York. \\\\
 
 \end{document}
